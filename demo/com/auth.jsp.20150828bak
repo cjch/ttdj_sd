@@ -1,0 +1,131 @@
+<%@page import="com.lutongnet.iptv.util.StringUtil"%>
+<%@page import="com.lutongnet.iptv.util.JsonUtil"%>
+<%@page import="com.lutongnet.iptv.util.HttpUtil"%>
+<%@page import="org.codehaus.jackson.type.TypeReference"%>
+<%@page import="java.util.regex.Matcher"%>
+<%@page import="java.util.regex.Pattern"%>
+<%@page import="java.io.OutputStream"%>
+<%@page import="java.io.OutputStreamWriter"%>
+<%@page import="java.net.URLConnection"%>
+<%@page import="java.net.URLEncoder"%>
+<%@page import="java.nio.charset.Charset"%>
+<%@page import="java.io.InputStreamReader"%>
+<%@page import="java.io.BufferedReader"%>
+<%@page import="java.net.URL"%>
+<%@page import="java.net.URI"%>
+<%@page import="java.net.HttpURLConnection"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="java.util.Map"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%!
+	//文件说明：
+	//鉴权、订购的文件，所有与鉴权、订购相关的代码都在这一个文件里面
+	//分省部署是一般只需要修改这一个文件即可
+	//这里是按广东电信的写法，如果别的省份有较大差别，请不要局限于这里的写法，只要保证返回指定格式的Entity对象即可
+	
+	public static final String AUTH_URL="http://125.88.99.58:8082/ACS/";//认证服务地址前缀
+	public static final String SPID="1111113";//产品的SP编号
+	public static final String MonthlyPID = "123321";//包月PID
+	public static final String MonthlySID = "110";//包月SID
+	public static final String AUTH_RETURN_URL="com/auth_redirect.jsp?method=";//返回URL前缀
+	
+	/**
+	 * 鉴权，判断账号是否合法，同时获取user_token
+	 */
+	public Map<String,String> login(String user_id,HttpServletRequest request)
+	{
+		String return_url = HttpUtil.getBasePath(request)+AUTH_RETURN_URL+"login";
+		String path=AUTH_URL+"vas/verifyuser?SPID="+SPID+"&UserID="+user_id+"&Action=UserTokenRequest&ReturnURL="+return_url;
+		return authGet(path);
+	}
+	
+	/**
+	 * 包月订购
+	 */
+	public Map<String,String> order(String user_id,String user_token,HttpServletRequest request)
+	{
+		String return_url = HttpUtil.getBasePath(request)+AUTH_RETURN_URL+"month_order";
+		String path = AUTH_URL + "vas/serviceorder";
+		path += "?SPID="+SPID;
+		path += "&ProductID="+MonthlyPID;
+		path += "&ServiceID="+MonthlySID;
+		path += "&ContinueType=1&OrderMode=1&Action=1&ContentID=";//Action=1表示订购
+		path += "&UserID="+user_id;
+		path += "&UserToken="+user_token;
+		path += "&ReturnURL="+return_url;
+		Map<String,String> result=authGet(path);
+		//result.put("city_code", getCityCodeByUserId(user_id));//用户的城市code
+		return result;
+	}
+	
+	/**
+	 * 判断用户是否包月
+	 * @return
+	 */
+	public boolean isMonthOrder(String user_id,String user_token)
+	{
+		String soap = "";
+		soap += "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://service.vas.huawei.com\" xmlns:bean=\"http://bean.vas.huawei.com\">";
+		soap += "<soapenv:Header/>";
+		soap += "<soapenv:Body>";
+		soap += "<ser:serviceAuthReq>";
+		soap += "<bean:IP></bean:IP>";
+		soap += "<bean:MAC></bean:MAC>";
+		soap += "<bean:SPID></bean:SPID>";
+		soap += "<bean:contentID></bean:contentID>";         
+		soap += "<bean:productID>" + MonthlyPID + "</bean:productID>";         
+		soap += "<bean:serviceID>" + MonthlySID + "</bean:serviceID>";         
+		soap += "<bean:timeStamp>" + System.currentTimeMillis() + "</bean:timeStamp>";         
+		soap += "<bean:transactionID></bean:transactionID>";         
+		soap += "<bean:userID>"+user_id+"</bean:userID>";
+		soap += "<bean:userToken>" + user_token + "</bean:userToken>";         
+		soap += "</ser:serviceAuthReq>";
+		soap += "</soapenv:Body>";
+		soap += "</soapenv:Envelope>";
+		String xml = HttpUtil.postSoap(AUTH_URL+"services/VASService",soap);
+		String result = StringUtil.parseSimpleXML(xml, "ns9:result");
+		return "0".equals(result);
+	}
+
+	/**
+	 * 判断是否是包天用户
+	 * @return
+	 */
+	public boolean isDayOrder()
+	{
+		return false;
+	}
+
+	/**
+	 * 登录鉴权或订购时需要用到的方法，其它省份可能不需要用到本方法
+	 * @param path 调用的地址
+	 * @return
+	 */
+	private Map<String,String> authGet(String path)
+	{
+		try
+		{
+			String json = HttpUtil.getWithException(path);//带异常抛出的GET
+			return JsonUtil.toObject(json, new TypeReference<Map<String,String>>(){});
+		}
+		catch(Exception e)
+		{
+			//订购或鉴权时，经常会因为结果的Description中有空格而导致重定向失败
+			//所以，如果重定向失败，我们从Exception中获取重定向地址，然后手工重定向
+			String pre="Server returned HTTP response code: 505 for URL: ";
+			String message=e.getMessage();
+			if(message!=null&&message.startsWith(pre))//如果错误信息以pre开头
+			{
+				path=message.replace(pre,"");//替换掉pre
+				path=path.replaceAll(" ","%20");//替换掉空格
+				return authGet(path);//递归调用当前方法
+			}
+			else
+			{
+				e.printStackTrace();
+				return null;
+			}
+		}
+	}
+	
+%>

@@ -1,0 +1,100 @@
+﻿body
+{
+	margin:0;
+	padding:0;
+	background:transparent no-repeat;
+	width:640px;
+	height:530px;
+	color: #000000;
+	/*加上overflow:hidden之后不会有滚动条*/
+	overflow:hidden;
+	font-family: Arial,'Microsoft Yahei';
+}
+img
+{
+	border:0;
+}
+div
+{
+	position: absolute;
+}
+/*移除div的绝对定位属性*/
+div.remove_abs
+{
+	position: static;
+}
+/*居中显示的文本*/
+div.center_txt
+{
+	position: absolute;
+	font-size: 18px;
+	color: black;
+	width: 260px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	overflow: hidden;
+}
+
+/*默认提示文字*/
+div.default_tip
+{
+	left: 100px;
+	top: 270px;
+	width: 440px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 24px;
+	color: yellow;
+	visibility: hidden;
+	z-index: 1000;
+	background-repeat: no-repeat;
+}
+/*遥控器提示文字*/
+div.ykq_tip
+{
+	left: 60px;
+	top: 360px;
+	width: 250px;
+	height: 50px;
+	line-height: 80px;
+	text-align: center;
+	font-size: 48px;
+	color: rgb(255, 255, 255);
+	visibility: hidden;
+	z-index: 1000;
+	background-repeat: no-repeat;
+}
+
+/*返回按钮*/
+div.back_img_div{left:590px; top:20px;}
+
+/***************以下都是与具体项目相关的样式***************/
+/*首页及二级页面顶部6个大按钮位置*/
+div#column_btn_0_div{left:28px; top:35px;}
+div#column_btn_1_div{left:104px; top:35px;}
+div#column_btn_2_div{left:165px; top:35px;}
+div#column_btn_3_div{left:222px; top:35px;}
+div#column_btn_4_div{left:337px; top:35px;}
+div#column_btn_5_div{left:427px; top:35px;}
+div#column_btn_6_div{left:499px; top:35px;}
+/*首页及二级页面顶部6个大按钮大小*/
+img#column_btn_0{width:77px; height:50px;}
+img#column_btn_1{width:59px; height:50px;}
+img#column_btn_2{width:58px; height:50px;}
+img#column_btn_3{width:115px; height:50px;}
+img#column_btn_4{width:91px; height:50px;}
+img#column_btn_5{width:73px; height:50px;}
+img#column_btn_6{width:61px; height:50px;}
+/*专辑文本*/
+.album_txt
+{
+	font-size: 16px;
+    height: 24px;
+    width: 97px;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: center;
+    color:#ffffff;
+}

@@ -1,0 +1,165 @@
+body
+{
+	margin:0;
+	padding:0;
+	background:transparent no-repeat;
+	width:1280px;
+	height:720px;
+	color: #000000;
+	/*加上overflow:hidden之后不会有滚动条*/
+	overflow:hidden;
+	font-family: Arial,'Microsoft Yahei';
+}
+img
+{
+	border:0;
+}
+div
+{
+	position: absolute;
+}
+/*移除div的绝对定位属性*/
+div.remove_abs
+{
+	position: static;
+}
+/*居中显示的文本*/
+div.center_txt
+{
+	position: absolute;
+	font-size: 18px;
+	color: black;
+	width: 260px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	overflow: hidden;
+}
+
+/*默认提示文字*/
+div.default_tip
+{
+	left: 340px;
+	top: 325px;
+	width: 600px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	font-size: 36px;
+	color: yellow;
+	visibility: hidden;
+	z-index: 1000;
+	background-repeat: no-repeat;
+}
+/*遥控器提示文字*/
+div.ykq_tip
+{
+	left: 90px;
+	top: 460px;
+	width: 440px;
+	height: 140px;
+	line-height: 140px;
+	text-align: center;
+	font-size: 80px;
+	color: rgb(245, 255, 6);
+	visibility: hidden;
+	z-index: 1000;
+	background-repeat: no-repeat;
+}
+
+/*返回按钮*/
+div.back_img_div{left:1180px; top:30px;}
+
+*
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+:before,:after
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+
+/*以下样式仅高清提供支持，标清请勿使用*/
+.btn_focus_blue
+{
+	border: solid 4px rgba(213, 236, 255, 0.9);
+	outline: 0;
+	border-radius: 10px;
+	z-index: 200;
+	/* transition: all 0.2s; */
+	-webkit-box-shadow: 0px 3px 10px rgba(0, 178, 253, 0.9),
+						0px -3px 10px rgba(0, 178, 253, 0.9),
+						-3px 0px 10px rgba(0, 178, 253, 0.9),
+						3px 0px 10px rgba(0, 178, 253, 0.9),
+						inset 0px 3px 10px rgba(0, 178, 253, 0.9),
+						inset 0px -3px 10px rgba(0, 178, 253, 0.9),
+						inset -3px 0px 10px rgba(0, 178, 253, 0.9),
+						inset 3px 0px 10px rgba(0, 178, 253, 0.9);
+	box-shadow:			0px 3px 10px rgba(0, 178, 253, 0.9),
+						0px -3px 10px rgba(0, 178, 253, 0.9),
+						-3px 0px 10px rgba(0, 178, 253, 0.9),
+						3px 0px 10px rgba(0, 178, 253, 0.9),
+						inset 0px 3px 10px rgba(0, 178, 253, 0.9),
+						inset 0px -3px 10px rgba(0, 178, 253, 0.9),
+						inset -3px 0px 10px rgba(0, 178, 253, 0.9),
+						inset 3px 0px 10px rgba(0, 178, 253, 0.9);
+}
+/*废弃不用*/
+.btn_focus_yellow_old
+{
+	border: solid 4px rgb(255, 255, 215);
+	outline: 0;
+	border-radius: 5px;
+	z-index: 200;
+	/* transition: all 0.2s; */
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+						6px 0px 15px rgba(245, 245, 45, 0.9),
+						-6px 0px 15px rgba(245, 245, 45, 0.9),
+						0px 6px 15px rgba(245, 245, 45, 0.9),
+						0px -6px 15px rgba(245, 245, 45, 0.9);
+	-webkit-box-shadow: 0px 3px 10px rgba(255, 255, 0, 0.9),
+						0px -3px 10px rgba(255, 255, 0, 0.9),
+						-3px 0px 10px rgba(255, 255, 0, 0.9),
+						3px 0px 10px rgba(255, 255, 0, 0.9),
+						inset 0px 1px 10px rgba(255, 255, 0, 0.9),
+						inset 0px -1px 10px rgba(255, 255, 0, 0.9),
+						inset -1px 0px 10px rgba(255, 255, 0, 0.9),
+						inset 1px 0px 10px rgba(255, 255, 0, 0.9);
+}
+.btn_focus_yellow
+{
+	border: solid 4px yellow;
+	outline: 0;
+	border-radius: 5px;
+	z-index: 200;
+	-webkit-box-shadow: 0 0 10px yellow;
+	box-shadow: 0 0 10px yellow;
+}
+
+
+
+
+/***************以下都是与具体项目相关的样式***************/
+/*首页及二级页面顶部6个大按钮位置*/
+div#column_btn_0_div{left:82px; top:27px;}
+div#column_btn_1_div{left:238px; top:27px;}
+div#column_btn_2_div{left:352px; top:27px;}
+div#column_btn_3_div{left:472px; top:27px;}
+div#column_btn_4_div{left:698px; top:27px;}
+div#column_btn_5_div{left:876px; top:27px;}
+div#column_btn_6_div{left:1025px; top:27px;}
+/*首页及二级页面顶部6个大按钮大小*/
+img#column_btn_0{width:113px; height:60px;}
+img#column_btn_1{width:81px; height:60px;}
+img#column_btn_2{width:81px; height:60px;}
+img#column_btn_3{width:162px; height:60px;}
+img#column_btn_4{width:134px; height:60px;}
+img#column_btn_5{width:106px; height:60px;}
+img#column_btn_6{width:81px; height:60px;}
+/*专辑文本*/
+.album_txt{width: 178px;height: 24px;text-align: center;line-height: 24px;font-size:22px;overflow: hidden;color: #ffffff;}
