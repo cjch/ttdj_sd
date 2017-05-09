@@ -6,7 +6,8 @@
 	String basePath = getBasePath(request);//这个basePath和config.jsp里面的BASE_PATH其实是一样的
 	String imagePath = getImagePath(request);
 	String targetType = getTargetType(request);
-	boolean isSD = "sd".equals(APP_VERSION);//是否是标清版
+//	boolean isSD = "sd".equals(APP_VERSION);//是否是标清版
+	boolean isSD = true;
 	setAttr
 	(
 		request,
