@@ -38,27 +38,29 @@
 		margin:0;
 		padding:0;
 		color:#FFFFFF;
-		background: transparent url('${comImagePath}bg.jpg') no-repeat;
+		background: transparent url('${comImagePath}bg_new.jpg') no-repeat;
 	}
 
-	#home_div{position:absolute;left:118px; top:62px;}
-	#tszl_div{position:absolute;left:262px; top:62px;}
-	#djss_div{position:absolute;left:406px; top:62px;}
-	#twgz_div{position:absolute;left:550px; top:62px;}
-	#yxlm_div{position:absolute;left:694px; top:62px;}
-	#wzry_div{position:absolute;left:838px; top:62px;}
-	.novi_nor{width:121px;height:47px;text-align:center;color:#788195;font-size:25px;}
-	.novi_focus{width:121px;height:47px;text-align:center;color:#f0f0f0;font-size:25px;}
-	.novi_sel{width:121px;height:47px;text-align:center;color:#f0f0f0;font-size:25px;background-image:url('${comImagePath}nav_sel.png')}
+	#search_div{position:absolute;left:438px;top:10px;}
+	#personCenter_div{position:absolute;left:526px;top:10px;}
+	#home_div{position:absolute;left:22px; top:94px; width: 60px;}
+	#tszl_div{position:absolute;left:86px; top:94px;}
+	#djss_div{position:absolute;left:190px; top:94px;}
+	#twgz_div{position:absolute;left:294px; top:94px;}
+	#yxlm_div{position:absolute;left:398px; top:94px;}
+	#wzry_div{position:absolute;left:502px; top:94px;}
+	.novi_nor{width:100px;height:40px;line-height:40px;text-align:center;color:#788195;font-size:18px;}
+	.novi_focus{width:100px;height:40px;line-height:40px;text-align:center;color:#f0f0f0;font-size:18px;}
+	.novi_sel{width:100px;height:40px;line-height:40px;text-align:center;color:#f0f0f0;font-size:18px;background-color: #4463e9; border-radius: 3px;}
 
-	#recommend_0_div{ position:absolute;left:60px; top:159px;width:767px;height:238px;}
-	#recommend_1_div{ position:absolute;left:847px; top:159px;width:373px;height:238px;}
-	#recommend_2_div{ position:absolute;left:60px; top:417px;width:373px;height:236px;}
-	#recommend_3_div{ position:absolute;left:453px; top:417px;width:373px;height:236px;}
-	#recommend_4_div{ position:absolute;left:847px; top:417px;width:373px;height:236px;}
+	#recommend_0_div{ position:absolute;left:21px; top:164px;width:350px;height:185px;}
+	#recommend_1_div{ position:absolute;left:381px; top:164px;width:238px;height:185px;}
+	#recommend_2_div{ position:absolute;left:21px; top:363px;width:192px;height:117px;}
+	#recommend_3_div{ position:absolute;left:223px; top:363px;width:192px;height:117px;}
+	#recommend_4_div{ position:absolute;left:425px; top:363px;width:192px;height:117px;}
 
 	.btn-group img.btn_focus_effect-focus{
-		border-radius: 4px;
+		border-radius: 2px;
 	}
 
 	.btn-group{
@@ -66,7 +68,6 @@
 	}
 	/*按钮高亮的时候，给图片加边距、颜色*/
 	.btn-group.focused{
-		padding: 2px;
 		background-color: #4599ff;
 		border-radius: 10px;
 		//border:solid 1px #4a9bff;
@@ -92,26 +93,26 @@
 	
 	var buttons = 
 	[
-		{id:'search',name:'搜索',action:goColumn,left:[''], right:['home'], up:'', down:'recommend_0',linkImage:'${touming}', focusImage:'${comImagePath}btn_sousuo_sel.png'},
-		{id:'home',name:'首页',action:goColumn,code:'home',left:['search'], right:['tszl'], up:'', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		{id:'tszl',name:'特色专栏',action:goColumn,code:'20170228_tszl_column',left:['home'], right:['djss'], up:'', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		{id:'djss',name:'顶级赛事',action:goColumn,code:'20170228_djss_column',left:['tszl'], right:['twgz'], up:'', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		{id:'twgz',name:'叹为观止',action:goColumn,code:'20170228_twgz_column',left:['djss'], right:['yxlm'], up:'', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		{id:'personCenter',name:'个人中心',code:'person_center',action:goColumn,left:['wzry'],down:'recommend_1',linkImage:'${comImagePath}btn_geren_nor.png', focusImage:'${comImagePath}btn_geren_sel.png'},
-		<c:forEach items="${recommendList}" var="p" varStatus="vs">
+        {id:'search',name:'搜索',action:goColumn,left:[''], right:['personCenter'], up:'', down:'home',linkImage:'${comImagePath}btn_search_nor.png', focusImage:'${comImagePath}btn_search_sel.png'},
+        {id:'personCenter',name:'个人中心',action:goColumn,code:'person_center',left:['search'],down:'wzry',linkImage:'${comImagePath}btn_geren_nor.png', focusImage:'${comImagePath}btn_geren_sel.png'},
+        {id:'home',name:'首页',action:goColumn,code:'home',left:['search'], right:['tszl'], up:'search', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'tszl',name:'特色专栏',action:goColumn,code:'20170228_tszl_column',left:['home'], right:['djss'], up:'search', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'djss',name:'顶级赛事',action:goColumn,code:'20170228_djss_column',left:['tszl'], right:['twgz'], up:'search', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'twgz',name:'叹为观止',action:goColumn,code:'20170228_twgz_column',left:['djss'], right:['yxlm'], up:'search', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'yxlm',name:'英雄联盟',action:goColumn,code:'20170311_LOL_album',left:['twgz'], right:['wzry'], up:'search', down:'recommend_1',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'wzry',name:'王者荣耀',action:goColumn,code:'20170314_wzry_album',left:['yxlm'], right:['personCenter'], up:'personCenter', down:'recommend_1',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        <c:forEach items="${recommendList}" var="p" varStatus="vs">
 		{id:'recommend_${vs.index}',name:'推荐${vs.index}',type:'${p.type}',code:'${p.value}',action:goRecommend,linkImage:'${basePath}${p.linkImageUri}',focusHandler:setZIndex,blurHandler:blurChangeBtnClass},
 		</c:forEach>
-		{id:'yxlm',name:'英雄联盟',action:goColumn,code:'20170311_LOL_album',left:['twgz'], right:['wzry'], up:'', down:'recommend_2',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		{id:'wzry',name:'王者荣耀',action:goColumn,code:'20170314_wzry_album',left:['yxlm'], right:['personCenter'], up:'', down:'recommend_2',focusHandler:focusChangeClass,blurHandler:blurChangeClass}
-
 	];
 	 
 	//设置走位
-	buttons[6].right='recommend_1';buttons[6].up='tszl';buttons[6].down='recommend_2';
-	buttons[7].left='recommend_0';buttons[7].up='tszl';buttons[7].down='recommend_4';
-	buttons[8].right='recommend_3';buttons[8].up='recommend_0';
-	buttons[9].left='recommend_2';buttons[9].right='recommend_4';buttons[9].up='recommend_0';
-	buttons[10].left='recommend_3';buttons[10].up='recommend_1';
+	var baseIdx = 8;
+	buttons[baseIdx].right='recommend_1';buttons[baseIdx].up='tszl';buttons[baseIdx].down='recommend_2';
+	buttons[baseIdx+1].left='recommend_0';buttons[baseIdx+1].up='tszl';buttons[baseIdx+1].down='recommend_4';
+	buttons[baseIdx+2].right='recommend_3';buttons[baseIdx+2].up='recommend_0';
+	buttons[baseIdx+3].left='recommend_2';buttons[baseIdx+3].right='recommend_4';buttons[baseIdx+3].up='recommend_0';
+	buttons[baseIdx+4].left='recommend_3';buttons[baseIdx+4].up='recommend_1';
 	
 	
 	//改变导航显示效果
@@ -161,11 +162,11 @@
 //			console.log(originData);
 //		}
 
-		top = top - 0.05*height;
-		left = left - 0.05*width;
+		top = top - 0.04*height;
+		left = left - 0.04*width;
 
-		G(button.id+"_div").style.width = width*1.1+"px";
-		G(button.id+"_div").style.height = height*1.1+"px";
+		G(button.id+"_div").style.width = width*1.08+"px";
+		G(button.id+"_div").style.height = height*1.08+"px";
 		G(button.id+"_div").style.top = top+"px";
 		G(button.id+"_div").style.left = left +"px";
 
@@ -300,6 +301,12 @@
 	
 </head>
 <body>
+	<div id="search_div">
+		<img id="search" 	src="${comImagePath}btn_search_nor.png" />
+	</div>
+	<div id="personCenter_div">
+		<img id="personCenter" 	src="${comImagePath}btn_geren_nor.png" />
+	</div>
 
 	<div id="home_div" class="novi_nor">首页</div>
 	<div id="tszl_div" class="novi_focus">特色专栏</div>
@@ -316,27 +323,12 @@
 	<div><img id="yxlm" src="${touming}" /></div>
 	<div><img id="wzry" src="${touming}" /></div>
 	<!-- 只是一个占位符 -->
-	
-	<div style="position:absolute;left:10px;top:38px;" >
-		<img id="searchimg" 	src="${comImagePath}btn_sousuo_nor.png" />
-	</div>
-	
-	<div style="position:absolute;left:10px;top:38px;" >
-		<img id="search" 	src="${touming}" />
-	</div>
-	
-	<div style="position:absolute;left:1074px;top:38px;" >
-		<img id="personCenter" 	src="${comImagePath}btn_geren_nor.png" />
-	</div>
-	
 
 	<c:forEach items="${recommendList}" var="p" varStatus="vs" >
-		<div id='recommend_${vs.index}_div'>
+		<div id='recommend_${vs.index}_div' class="btn-group">
 			<img id="recommend_${vs.index}" src="${basePath}${p.linkImageUri}" />
 		</div>
 	</c:forEach>
-
-
 
 	<%@include file="/com/com_bottom.jsp"%>
 	
