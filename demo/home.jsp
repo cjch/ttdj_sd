@@ -54,6 +54,8 @@
 		height: 100%;
 	}
 
+	#search_div{position:absolute;left:438px;top:10px;}
+	#personCenter_div{position:absolute;left:526px;top:10px;}
 	#home_div{position:absolute;left:22px; top:94px; width: 60px;}
 	#tszl_div{position:absolute;left:86px; top:94px;}
 	#djss_div{position:absolute;left:190px; top:94px;}
@@ -388,10 +390,10 @@
 	
 </head>
 <body>
-	<div style="position:absolute;left:438px;top:10px;" >
+	<div id="search_div">
 		<img id="search" 	src="${comImagePath}btn_search_nor.png" />
 	</div>
-	<div style="position:absolute;left:526px;top:10px;" >
+	<div id="personCenter_div">
 		<img id="personCenter" 	src="${comImagePath}btn_geren_nor.png" />
 	</div>
 
