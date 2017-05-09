@@ -69,8 +69,8 @@
 	#recommend_2_div{ position:absolute;left:476px; top:164px;width:144px;height:205px;}
 	#recommend_3_div{ position:absolute;left:22px; top:272px;width:144px;height:97px;}
 	#recommend_4_div{ position:absolute;left:22px; top:383px;width:144px;height:97px;}
-	#recommend_5_div{ position:absolute;left:176px; top:383px;width:144px;height:97px;}
-	#recommend_6_div{ position:absolute;left:326px; top:383px;width:144px;height:97px;}
+	#recommend_5_div{ position:absolute;left:176px; top:383px;width:140px;height:97px;}
+	#recommend_6_div{ position:absolute;left:326px; top:383px;width:140px;height:97px;}
 	#recommend_7_div{ position:absolute;left:476px; top:383px;width:144px;height:97px;}
 
 
