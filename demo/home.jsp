@@ -106,11 +106,11 @@
 	[
 		{id:'search',name:'搜索',action:goColumn,left:[''], right:['personCenter'], up:'', down:'home',linkImage:'${comImagePath}btn_search_nor.png', focusImage:'${comImagePath}btn_search_sel.png'},
         {id:'personCenter',name:'个人中心',action:goColumn,code:'person_center',left:['search'],down:'wzry',linkImage:'${comImagePath}btn_geren_nor.png', focusImage:'${comImagePath}btn_geren_sel.png'},
-        {id:'home',name:'首页',action:goColumn,code:'home',left:['search'], right:['tszl'], up:'', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'home',name:'首页',action:goColumn,code:'home',left:['search'], right:['tszl'], up:'search', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
 		{id:'tszl',name:'特色专栏',action:goColumn,code:'20170228_tszl_column',left:['home'], right:['djss'], up:'search', down:'recommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
 		{id:'djss',name:'顶级赛事',action:goColumn,code:'20170228_djss_column',left:['tszl'], right:['twgz'], up:'search', down:'recommend_1',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
 		{id:'twgz',name:'叹为观止',action:goColumn,code:'20170228_twgz_column',left:['djss'], right:['yxlm'], up:'search', down:'recommend_1',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		 {id:'yxlm',name:'英雄联盟',action:goColumn,code:'20170311_LOL_album',left:['twgz'], right:['wzry'], up:'search', down:'recommend_2',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+		{id:'yxlm',name:'英雄联盟',action:goColumn,code:'20170311_LOL_album',left:['twgz'], right:['wzry'], up:'search', down:'recommend_2',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
         {id:'wzry',name:'王者荣耀',action:goColumn,code:'20170314_wzry_album',left:['yxlm'], right:['personCenter'], up:'personCenter', down:'recommend_2',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
         <c:forEach items="${recommendList}" var="p" varStatus="vs">
 		<c:if test="${vs.index == 1}">
@@ -125,14 +125,15 @@
 	];
 	 
 	//设置走位
-	buttons[8].right='recommend_1';buttons[8].up='home';buttons[8].down='recommend_3';
-	buttons[9].left='recommend_0';buttons[9].right='recommend_2';buttons[9].up='djss';buttons[9].down='recommend_5';
-	buttons[10].left='recommend_1';buttons[10].up='wzry';buttons[10].down='recommend_7';
-	buttons[11].right='recommend_1';buttons[11].up='recommend_0';buttons[11].down='recommend_4';
-	buttons[12].right='recommend_5';buttons[12].up='recommend_3';
-	buttons[13].left='recommend_4';buttons[13].right='recommend_6';buttons[13].up='recommend_1';
-	buttons[14].left='recommend_5';buttons[14].right='recommend_7';buttons[14].up='recommend_1';
-	buttons[15].left='recommend_6';buttons[15].up='recommend_2';
+    var baseIdx = 8;
+    buttons[baseIdx].right='recommend_1';buttons[baseIdx].up='home';buttons[baseIdx].down='recommend_3';
+    buttons[baseIdx+1].left='recommend_0';buttons[baseIdx+1].right='recommend_2';buttons[baseIdx+1].up='djss';buttons[baseIdx+1].down='recommend_5';
+    buttons[baseIdx+2].left='recommend_1';buttons[baseIdx+2].up='wzry';buttons[baseIdx+2].down='recommend_7';
+    buttons[baseIdx+3].right='recommend_1';buttons[baseIdx+3].up='recommend_0';buttons[baseIdx+3].down='recommend_4';
+    buttons[baseIdx+4].right='recommend_5';buttons[baseIdx+4].up='recommend_3';
+    buttons[baseIdx+5].left='recommend_4';buttons[baseIdx+5].right='recommend_6';buttons[baseIdx+5].up='recommend_1';
+    buttons[baseIdx+6].left='recommend_5';buttons[baseIdx+6].right='recommend_7';buttons[baseIdx+6].up='recommend_1';
+    buttons[baseIdx+7].left='recommend_6';buttons[baseIdx+7].up='recommend_2';
 	
 
 	//改变导航显示效果
@@ -497,9 +498,9 @@
 
 		<!-- 退出弹出框 -->
 
-	<div id="exit_dialog_div"  style="position:absolute;left:137px;top:138px;width:367px;height:253px;background: url('${imagePath}bg_quit.png');visibility:hidden;z-index:300;" >
-		<div style="left: 13px; top: 146px;background: url('${imagePath}btn_quxiao_nor.png');width:170px;height:77px;" ><img id="cancel" src="${touming}"></div>
-		<div style="left: 187px; top: 146px;background: url('${imagePath}btn_tuichu_nor.png');width:170px;height:77px;" ><img id="exit" src="${touming}"/></div>
+	<div id="exit_dialog_div"  style="position:absolute;left:200px;top:194px;width:240px;height:142px;background: url('${imagePath}bg_quit.png');visibility:hidden;z-index:300;" >
+		<div style="left: 20px; top: 80px;background: url('${imagePath}btn_quxiao_nor.png');width:95px;height:43px;" ><img id="cancel" src="${touming}"></div>
+		<div style="left: 125px; top: 80px;background: url('${imagePath}btn_tuichu_nor.png');width:95px;height:43px;" ><img id="exit" src="${touming}"/></div>
 	</div>
 
 	<%@include file="/com/com_bottom.jsp"%>
