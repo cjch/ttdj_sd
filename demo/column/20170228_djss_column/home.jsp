@@ -57,41 +57,43 @@
 		margin:0;
 		padding:0;
 		color:#FFFFFF;
-		background: transparent url('${imagePath}bg.png') no-repeat;
+		background: transparent url('${comImagePath}bg_new.jpg') no-repeat;
 	}
 
-	#home_div{position:absolute;left:112px; top:57px;line-height:47px;}
-	#tszl_div{position:absolute;left:253px; top:57px;line-height:47px;}
-	#djss_div{position:absolute;left:396px; top:57px;line-height:47px;}
-	#twgz_div{position:absolute;left:538px; top:57px;line-height:47px;}
-	#yxlm_div{position:absolute;left:680px; top:57px;line-height:47px;}
-	#wzry_div{position:absolute;left:822px; top:57px;line-height:47px;}
-	.novi_nor{width:136px;height:47px;line-height:47px;text-align:center;color:#788195;font-size:25px;}
-	.novi_focus{width:136px;height:47px;line-height:47px;text-align:center;color:#f0f0f0;font-size:25px;}
-	.novi_sel{width:136px;height:47px;line-height:47px;text-align:center;color:#f0f0f0;font-size:25px;background-image:url('${comImagePath}btn_ding_sel.png')}
+	#search_div{position:absolute;left:438px;top:10px;}
+	#personCenter_div{position:absolute;left:526px;top:10px;}
+	#home_div{position:absolute;left:22px; top:94px; width: 60px;}
+	#tszl_div{position:absolute;left:86px; top:94px;}
+	#djss_div{position:absolute;left:190px; top:94px;}
+	#twgz_div{position:absolute;left:294px; top:94px;}
+	#yxlm_div{position:absolute;left:398px; top:94px;}
+	#wzry_div{position:absolute;left:502px; top:94px;}
+	.novi_nor{width:100px;height:40px;line-height:40px;text-align:center;color:#788195;font-size:18px;}
+	.novi_focus{width:100px;height:40px;line-height:40px;text-align:center;color:#f0f0f0;font-size:18px;}
+	.novi_sel{width:100px;height:40px;line-height:40px;text-align:center;color:#f0f0f0;font-size:18px;background-color: #4463e9; border-radius: 3px;}
 
-	#rightRecommend_0_div{ position:absolute;left:1033px; top:159px;width:187px;height:279px;}
+	#rightRecommend_0_div{ position:absolute;left:515px; top:164px;width:104px;height:175px;}
 
-	#midRecommend_0_div{ position:absolute;left:60px; top:465px;width:177px;height:91px;}
-	#midRecommend_1_div{ position:absolute;left:257px; top:465px;width:177px;height:91px;}
-	#midRecommend_2_div{ position:absolute;left:454px; top:465px;width:177px;height:91px;}
-	#midRecommend_3_div{ position:absolute;left:651px; top:465px;width:177px;height:91px;}
-	#midRecommend_4_div{ position:absolute;left:848px; top:465px;width:177px;height:91px;}
-	#midRecommend_5_div{ position:absolute;left:1045px; top:465px;width:177px;height:91px;}
+	#midRecommend_0_div{ position:absolute;left:21px; top:354px;width:111px;height:66px;}
+	#midRecommend_1_div{ position:absolute;left:142px; top:354px;width:111px;height:66px;}
+	#midRecommend_2_div{ position:absolute;left:263px; top:354px;width:111px;height:66px;}
+	#midRecommend_3_div{ position:absolute;left:384px; top:354px;width:111px;height:66px;}
+	#midRecommend_4_div{ position:absolute;left:505px; top:354px;width:111px;height:66px;}
+	#midRecommend_5_div{ position:absolute;left:505px; top:354px;width:111px;height:66px;}
 
 
-	#bottomRecommend_0_div{ position:absolute;left:60px; top:583px;width:177px;height:71px;}
-	#bottomRecommend_1_div{ position:absolute;left:257px; top:583px;width:177px;height:71px;}
-	#bottomRecommend_2_div{ position:absolute;left:454px; top:583px;width:177px;height:71px;}
-	#bottomRecommend_3_div{ position:absolute;left:651px; top:583px;width:177px;height:71px;}
-	#bottomRecommend_4_div{ position:absolute;left:848px; top:583px;width:177px;height:71px;}
-	#bottomRecommend_5_div{ position:absolute;left:1045px; top:583px;width:177px;height:71px;}
+	#bottomRecommend_0_div{ position:absolute;left:21px; top:434px;width:111px;height:46px;}
+	#bottomRecommend_1_div{ position:absolute;left:142px; top:434px;width:111px;height:46px;}
+	#bottomRecommend_2_div{ position:absolute;left:263px; top:434px;width:111px;height:46px;}
+	#bottomRecommend_3_div{ position:absolute;left:384px; top:434px;width:111px;height:46px;}
+	#bottomRecommend_4_div{ position:absolute;left:505px; top:434px;width:111px;height:46px;}
+	#bottomRecommend_5_div{ position:absolute;left:505px; top:434px;width:111px;height:46px;}
 
-	.wordRecommend_0_div{ position:absolute;left:555px; top:159px;width:450px;height:55px;}
-	.wordRecommend_1_div{ position:absolute;left:555px; top:214px;width:450px;height:55px;}
-	.wordRecommend_2_div{ position:absolute;left:555px; top:269px;width:450px;height:55px;}
-	.wordRecommend_3_div{ position:absolute;left:555px; top:324px;width:450px;height:55px;}
-	.wordRecommend_4_div{ position:absolute;left:555px; top:379px;width:450px;height:55px;}
+	.wordRecommend_0_div{ position:absolute;left:291px; top:164px;width:214px;height:34px;}
+	.wordRecommend_1_div{ position:absolute;left:291px; top:199px;width:214px;height:34px;}
+	.wordRecommend_2_div{ position:absolute;left:291px; top:234px;width:214px;height:34px;}
+	.wordRecommend_3_div{ position:absolute;left:291px; top:269px;width:214px;height:34px;}
+	.wordRecommend_4_div{ position:absolute;left:291px; top:304px;width:214px;height:34px;}
 
 	.btn-bottom-group{
 		background-position: -253px 0px;
@@ -113,7 +115,7 @@
 		box-shadow: 0px 0px 2px 3px #1465C9;
 
 	}
-	.btn-group img{
+	.btn-group img, .btn-bottom-group img{
 		display: inline-block;
 		vertical-align: middle;
 		-moz-border-radius:4px;
@@ -123,8 +125,8 @@
 		height: 100%;
 	}
 
-	.wordBg_nor{left:0px;top:0px;width:450px;height:55px;font-size:24px;padding-left:20px;line-height:55px;overflow:hidden;}	
-	.wordBg_sel{background-image: url(${imagePath}tab_xuanzhong.png);left:0px;top:0px;width:450px;height:55px;font-size:24px;padding-left:20px;line-height:55px;overflow:hidden;}
+	.wordBg_nor{left:0px;top:0px;width:209px;height:34px;font-size:18px;padding-left:5px;line-height:34px;overflow:hidden;}
+	.wordBg_sel{background-image: url(${imagePath}tab_xuanzhong.png);left:0px;top:0px;width:209px;height:34px;font-size:18px;padding-left:5px;line-height:34px;overflow:hidden;}
 	</style>
 	<script type="text/javascript">	
 	//当前导航
@@ -133,19 +135,18 @@
 	
 	var buttons = 
 	[
-		{id:'search',name:'搜索',action:goColumn,left:[''], right:['home'], up:'', down:'smallvod',linkImage:'${touming}', focusImage:'${comImagePath}btn_sousuo_sel.png'},
-		{id:'home',name:'首页',action:goColumn,code:'home',left:['search'], right:['tszl'], up:'', down:'smallvod',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		{id:'tszl',name:'特色专栏',action:goColumn,code:'20170228_tszl_column',left:['home'], right:['djss'], up:'', down:'smallvod',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		{id:'djss',name:'顶级赛事',action:goColumn,code:'20170228_djss_column',left:['tszl'], right:['twgz'], up:'', down:'smallvod',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		{id:'twgz',name:'叹为观止',action:goColumn,code:'20170228_twgz_column',left:['djss'], right:['yxlm'], up:'', down:'wordRecommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		{id:'yxlm',name:'英雄联盟',action:goColumn,code:'20170311_LOL_album',left:['twgz'], right:['wzry'], up:'', down:'recommend_2',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		{id:'wzry',name:'王者荣耀',action:goColumn,code:'20170314_wzry_album',left:['yxlm'], right:['personCenter'], up:'', down:'recommend_2',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
-		
-		{id:'personCenter',name:'个人中心',code:'person_center',action:goColumn,left:['wzry'],down:'rightRecommend_0',linkImage:'${comImagePath}btn_geren_nor.png', focusImage:'${comImagePath}btn_geren_sel.png'},
-		{id:'smallvod',name:'小视频',action:fullscreen,right:['wordRecommend_0'],down:'midRecommend_0',up:'djss',down:'midRecommend_0',linkImage:'${touming}', focusImage:'${imagePath}fullscreen.png'},
+        {id:'search',name:'搜索',action:goColumn,left:[''], right:['personCenter'], up:'', down:'home',linkImage:'${comImagePath}btn_search_nor.png', focusImage:'${comImagePath}btn_search_sel.png'},
+        {id:'personCenter',name:'个人中心',action:goColumn,code:'person_center',left:['search'],down:'wzry',linkImage:'${comImagePath}btn_geren_nor.png', focusImage:'${comImagePath}btn_geren_sel.png'},
+        {id:'home',name:'首页',action:goColumn,code:'home',left:['search'], right:['tszl'], up:'search', down:'smallvod',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'tszl',name:'特色专栏',action:goColumn,code:'20170228_tszl_column',left:['home'], right:['djss'], up:'search', down:'smallvod',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'djss',name:'顶级赛事',action:goColumn,code:'20170228_djss_column',left:['tszl'], right:['twgz'], up:'search', down:'smallvod',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'twgz',name:'叹为观止',action:goColumn,code:'20170228_twgz_column',left:['djss'], right:['yxlm'], up:'search', down:'wordRecommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'yxlm',name:'英雄联盟',action:goColumn,code:'20170311_LOL_album',left:['twgz'], right:['wzry'], up:'search', down:'wordRecommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'wzry',name:'王者荣耀',action:goColumn,code:'20170314_wzry_album',left:['yxlm'], right:['personCenter'], up:'personCenter', down:'rightRecommend_0',focusHandler:focusChangeClass,blurHandler:blurChangeClass},
+        {id:'smallvod',name:'小视频',action:fullscreen,right:['wordRecommend_0'],down:'midRecommend_0',up:'djss',down:'wordRecommend_0',linkImage:'${touming}', focusImage:'${imagePath}fullscreen.png'},
 		
 		<c:forEach items="${rightRecommendList}" var="p" varStatus="vs">
-		{id:'rightRecommend_${vs.index}',name:'右侧推荐${vs.index}',type:'${p.type}',code:'${p.value}',action:goRecommend,left:'wordRecommend_0',up:'personCenter',down:'midRecommend_5',action:goRecommend,focusHandler:setZIndex,blurHandler:blurChangeBtnClass},
+		{id:'rightRecommend_${vs.index}',name:'右侧推荐${vs.index}',type:'${p.type}',code:'${p.value}',action:goRecommend,left:'wordRecommend_0',up:'wzry',down:'midRecommend_5',action:goRecommend,focusHandler:setZIndex,blurHandler:blurChangeBtnClass},
 		</c:forEach>
 		<c:forEach items="${midRecommendList}" var="p" varStatus="vs">
 		{id:'midRecommend_${vs.index}',name:'中间推荐${vs.index}',type:'${p.type}',code:'${p.value}',left:'midRecommend_${vs.index-1}',right:'midRecommend_${vs.index+1}',down:'bottomRecommend_${vs.index}',up:'${vs.index < 3 ? 'smallvod':vs.index <5 ? 'wordRecommend_4':'rightRecommend_0'}',action:goRecommend,linkImage:'${basePath}${p.linkImageUri}', focusHandler:setZIndex,blurHandler:blurChangeBtnClass},
@@ -223,10 +224,10 @@
 			//38 left
 			//25.5 top
 		}else {
-			top = top - 0.05*height;
-			left = left - 0.05*width;
-			G(button.id + "_div").style.width = width * 1.1 + "px";
-			G(button.id + "_div").style.height = height * 1.1 + "px";
+			top = top - 0.04*height;
+			left = left - 0.04*width;
+			G(button.id + "_div").style.width = width * 1.08 + "px";
+			G(button.id + "_div").style.height = height * 1.08 + "px";
 
 			G(button.id + "_div").style.top = top + "px";
 			G(button.id + "_div").style.left = left + "px";
@@ -451,6 +452,12 @@
 	
 </head>
 <body>
+	<div id="search_div">
+		<img id="search" 	src="${comImagePath}btn_search_nor.png" />
+	</div>
+	<div id="personCenter_div">
+		<img id="personCenter" 	src="${comImagePath}btn_geren_nor.png" />
+	</div>
 
 	<div id="home_div" class="novi_nor">首页</div>
 	<div id="tszl_div" class="novi_nor">特色专栏</div>
@@ -470,39 +477,26 @@
 	
 	
 	
-	<div style="position:absolute;left:555px;top:159px;" >
-		<img src="${imagePath}tab_nor.png" width="450" height="278" />
+	<div style="position:absolute;left:291px;top:164px;" >
+		<img src="${imagePath}tab_nor.png" width="214" height="176" />
 	</div>
 	
 	<!-- 5个文字说明 -->
 	<c:forEach items="${wordList}" var="p" varStatus="vs" >
 		<div class='wordRecommend_${vs.index}_div'>
 			<div id="wordRecommend_${vs.index}_txt" class="wordBg_nor" >${p.label}</div>
-			<img id="wordRecommend_${vs.index}" src="${touming}" width="450" height="55" />
+			<img id="wordRecommend_${vs.index}" src="${touming}" width="214" height="34" />
 		</div>
 	</c:forEach>
-
-
-	<div style="position:absolute;left:22px;top:57px;" >
-		<img id="searchimg" 	src="${comImagePath}btn_sousuo_nor.png" />
-	</div>
-
-	<div style="position:absolute;left:22px;top:57px;" >
-		<img id="search" 	src="${touming}" />
-	</div>
-
-	<div style="position:absolute;left:1085px;top:57px;" >
-		<img id="personCenter" 	src="${comImagePath}btn_geren_nor.png" />
-	</div>
 	
 	<c:forEach items="${rightRecommendList}" var="p" varStatus="vs" >
-		<div id='rightRecommend_${vs.index}_div'>
+		<div id='rightRecommend_${vs.index}_div' class="btn-group">
 			<img id="rightRecommend_${vs.index}" src="${basePath}${p.linkImageUri}" />
 		</div>
 	</c:forEach>
 	
 	<c:forEach items="${midRecommendList}" var="p" varStatus="vs" >
-		<div id='midRecommend_${vs.index}_div'>
+		<div id='midRecommend_${vs.index}_div' class="btn-group">
 			<img id="midRecommend_${vs.index}" src="${basePath}${p.linkImageUri}" />
 		</div>
 	</c:forEach>
@@ -515,14 +509,14 @@
  
 
 	<!-- 小视频 -->
-	<div id="hbdiv" style="position:absolute; left:62px; top:157px; width:481px; height:282px;display:block;">
-		<img id="hb" src="" width="481px" height="282px" />
+	<div id="hbdiv" style="position:absolute; left:21px; top:164px; width:270px; height:176px;display:block;">
+		<img id="hb" src="" width="100%" height="100%" />
 	</div>
-	<div style="position:absolute; left:62px; top:157px; width:481px; height:282px;">
+	<div style="position:absolute; left:21px; top:164px; width:270px; height:176px;">
 		<iframe id="videoFrame" name="videoFrame" src="" width="1" height="1" bgcolor="transparent" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
 	</div>
-	<div style="position:absolute; left:27px; top:124px;">
-		<img id="smallvod" src="${touming}" width="551" height="349" />
+	<div style="position:absolute; left:5px; top:150px;">
+		<img id="smallvod" src="${touming}" width="300" height="200" />
 	</div>
 	
 	<%@include file="/com/com_bottom.jsp"%>
