@@ -45,27 +45,27 @@ body{
 	margin:0;
 	padding:0;
 	color:#FFFFFF;
-	background: transparent url('${comImagePath}bg.jpg') no-repeat;
+	background: transparent url('${comImagePath}bg_search.jpg') no-repeat;
 }
 
-.recommend_0_img{position:absolute;left:572px;top:112px;width:300px;height:130px;}
-.recommend_1_img{position:absolute;left:572px;top:245px;width:300px;height:130px;}
-.recommend_2_img{position:absolute;left:572px;top:378px;width:300px;height:130px;}
-.recommend_3_img{position:absolute;left:572px;top:511px;width:300px;height:130px;}
+.recommend_0_img{position:absolute;left:273px;top:88px;width:150px;height:85px;}
+.recommend_1_img{position:absolute;left:273px;top:183px;width:150px;height:85px;}
+.recommend_2_img{position:absolute;left:273px;top:278px;width:150px;height:85px;}
+.recommend_3_img{position:absolute;left:273px;top:373px;width:150px;height:85px;}
 
-.recommend_0_div{position:absolute;left:552px;top:96px;width:237px;height:141px;}
-.recommend_1_div{position:absolute;left:552px;top:230px;width:237px;height:141px;}
-.recommend_2_div{position:absolute;left:552px;top:366px;width:237px;height:141px;}
-.recommend_3_div{position:absolute;left:552px;top:498px;width:237px;height:141px;}
+.recommend_0_div{position:absolute;left:262px;top:78px;width:172px;height:102px;}
+.recommend_1_div{position:absolute;left:262px;top:173px;width:172px;height:102px;}
+.recommend_2_div{position:absolute;left:262px;top:268px;width:172px;height:102px;}
+.recommend_3_div{position:absolute;left:262px;top:363px;width:172px;height:102px;}
 
 
-.searchRank_0_div{position:absolute;left:917px;top:112px;width:307px;height:65px;background-image: url(${imagePath}bg_paihang_nor.png);}
-.searchRank_1_div{position:absolute;left:917px;top:182px;width:307px;height:65px;background-image: url(${imagePath}bg_paihang_nor.png);}
-.searchRank_2_div{position:absolute;left:917px;top:252px;width:307px;height:65px;background-image: url(${imagePath}bg_paihang_nor.png);}
-.searchRank_3_div{position:absolute;left:917px;top:322px;width:307px;height:65px;background-image: url(${imagePath}bg_paihang_nor.png);}
-.searchRank_4_div{position:absolute;left:917px;top:392px;width:307px;height:65px;background-image: url(${imagePath}bg_paihang_nor.png);}
-.searchRank_5_div{position:absolute;left:917px;top:462px;width:307px;height:65px;background-image: url(${imagePath}bg_paihang_nor.png);}
-.searchRank_6_div{position:absolute;left:917px;top:532px;width:307px;height:65px;background-image: url(${imagePath}bg_paihang_nor.png);}
+.searchRank_0_div{position:absolute;left:447px;top:89px;width:173px;height:37px;background-image: url(${imagePath}bg_paihang_nor.png);}
+.searchRank_1_div{position:absolute;left:447px;top:127px;width:173px;height:37px;background-image: url(${imagePath}bg_paihang_nor.png);}
+.searchRank_2_div{position:absolute;left:447px;top:165px;width:173px;height:37px;background-image: url(${imagePath}bg_paihang_nor.png);}
+.searchRank_3_div{position:absolute;left:447px;top:203px;width:173px;height:37px;background-image: url(${imagePath}bg_paihang_nor.png);}
+.searchRank_4_div{position:absolute;left:447px;top:241px;width:173px;height:37px;background-image: url(${imagePath}bg_paihang_nor.png);}
+.searchRank_5_div{position:absolute;left:447px;top:279px;width:173px;height:37px;background-image: url(${imagePath}bg_paihang_nor.png);}
+.searchRank_6_div{position:absolute;left:447px;top:317px;width:173px;height:37px;background-image: url(${imagePath}bg_paihang_nor.png);}
 
 </style>
 <script src="${basePath}resources/js/jquery-v2.1.1.js"></script>
@@ -139,8 +139,8 @@ var buttons=[
 {id:'all_key_0',name:'0',action:"input('0')",left:['all_key_9'], right:['recommend_0'], up:'all_key_4', down:'t9button',linkImage:'${imagePath}allkey/btn_0_nor.png', focusImage:'${imagePath}allkey/btn_0_sel.png'},
 
 
-{id:'t9button',name:'t9',action:showT9,left:[''], right:['allkeybutton'], up:'', down:'',linkImage:'${touming}', focusImage:'${imagePath}bg_del_sel.png',beforeMove:goKeyBoard},
-{id:'allkeybutton',name:'allkey',action:showAllKey,left:['t9button'], right:['recommend_3'], up:'', down:'',linkImage:'${touming}', focusImage:'${imagePath}bg_del_sel.png',beforeMove:goKeyBoard}
+{id:'t9button',name:'t9',action:showT9,left:[''], right:['allkeybutton'], up:'', down:'',linkImage:'${imagePath}btn_kb_nor.png', focusImage:'${imagePath}btn_kb_sel.png',beforeMove:goKeyBoard},
+{id:'allkeybutton',name:'allkey',action:showAllKey,left:['t9button'], right:['recommend_3'], up:'', down:'',linkImage:'${imagePath}btn_kb_nor.png', focusImage:'${imagePath}btn_kb_sel.png',beforeMove:goKeyBoard}
 
 ];
 
@@ -148,15 +148,15 @@ var buttons=[
 function showT9(){
 	G("t9").style.display = "block";
 	G("allkey").style.display = "none";
-	G("t9buttondiv").style.color = "#6aa6ff";
-	G("allkeybuttondiv").style.color = "white";
+	G("t9buttondiv").style.color = "#67a4ff";
+	G("allkeybuttondiv").style.color = "#f0f0f0";
 }
 //显示allkey 半闭t9
 function showAllKey(){
 	G("t9").style.display = "none";
 	G("allkey").style.display = "block";
-	G("t9buttondiv").style.color = "white";
-	G("allkeybuttondiv").style.color = "#6aa6ff";
+	G("t9buttondiv").style.color = "#f0f0f0";
+	G("allkeybuttondiv").style.color = "#67a4ff";
 }
 
 function goKeyBoard(dir,button){
@@ -305,11 +305,11 @@ function showRecommendAndSearchDiv(data){
 		buttons[i].code = data[i].code;
 		html = html + 
 			"<div class='recommend_"+i+"_img'>"+
-			"<img  src='${basePath}"+ data[i].thumbHD +"' width='217px' height='123px' />"+
+			"<img  src='${basePath}"+ data[i].thumbHD +"' width='100%' height='100%' />"+
 			"</div>"+
 			"<div class='recommend_"+i+"_div'>"+
-			"<img id='recommend_"+i+"' src='${touming}' width='257px' height='150px' />"+
-			"<div style='background-color: #505275; top:108px;left:20px;width:217px;height:30px;opacity:0.70;font-size:20px;' >"+data[i].name+"</div>"+
+			"<img id='recommend_"+i+"' src='${touming}' width='100%' height='100%' />"+
+			"<div style='background:url(${imagePath}bg_zhezhao.png);top:72px;left:11px;width:150px;height:23px;font-size:10px;' >"+data[i].name+"</div>"+
 			"</div>";
 	}
 	
@@ -390,26 +390,26 @@ function press(button){
 	midBlock.push(parseInt(top));	
 	//计算左边方块的坐标
 	var leftBlock = [];
-	var templeft = parseInt(left) - 120 ;
+	var templeft = parseInt(left) - 67;
 	var temptop = parseInt(top);
 	leftBlock.push(templeft);
 	leftBlock.push(temptop);
 	//计算右边方块的坐标
 	var rightBlock = [];
-	templeft = parseInt(left) + 120 ;
+	templeft = parseInt(left) + 67;
 	temptop = parseInt(top);
 	rightBlock.push(templeft);
 	rightBlock.push(temptop);
 	//计算上边方块的坐标
 	var upBlock = [];
 	templeft = parseInt(left) ;
-	temptop = parseInt(top) - 120;
+	temptop = parseInt(top) - 67;
 	upBlock.push(templeft);
 	upBlock.push(temptop);	
 	//计算下边方块的坐标
 	var downBlock = [];
 	templeft = parseInt(left) ;
-	temptop = parseInt(top) + 120;
+	temptop = parseInt(top) + 67;
 	downBlock.push(templeft);
 	downBlock.push(temptop);	
 	
@@ -832,134 +832,132 @@ window.onload=function()
 	
 </script>
 <body>
-<div style="position:absolute;left:0px;top:0px;width:450px;height:720px;background-color: #0b0e34; "></div>
-
 <!-- 搜索小图标 -->
-<div style="position:absolute;left:72px;top:52px;"><img src="${imagePath}ico_sousuo.png" /></div>
+<div style="position:absolute;left:27px;top:101px;"><img src="${imagePath}ico_sousuo.png" /></div>
 <!-- 搜索线 -->
-<div style="position:absolute;left:60px;top:92px;"><img src="${imagePath}line_sousuo.png" width="347px" height="2px" /></div>
-<div id="keyword" style="position:absolute;left:125px;top:46px;font-size:23px;line-height:46px;text-align:left;color:white;">首字母搜索游戏</div>
+<div style="position:absolute;left:24px;top:124px;"><img src="${imagePath}line_sousuo.png" width="194px" height="2px" /></div>
+<div id="keyword" style="position:absolute;left:52px;top:101px;font-size:14px;line-height:18px;text-align:left;color:#788195;">首字母搜索游戏</div>
 <!-- 猜你喜欢 -->
-<div id="wordChange" style="position:absolute;left:572px;top:56px;text-align:left;color:#788195;font-size:20px;line-height:40px;">猜你喜欢</div>
+<div id="wordChange" style="position:absolute;left:273px;top:56px;text-align:left;color:rgba(240,240,240,0.4);font-size:14px;line-height:14px;">猜你喜欢</div>
 
 <!-- 搜索排行 -->
-<div style="position:absolute;left:917px;top:55px;width:307px;text-align:left;color:#788195;font-size:20px;line-height:40px;">搜索排行</div>
+<div style="position:absolute;left:447px;top:56px;text-align:left;color:rgba(240,240,240,0.4);font-size:14px;line-height:14px;">搜索排行</div>
 
 <!-- 清空 -->
-<div style="position:absolute;left:60px;top:113px;"><img id="deleteAll" src="${imagePath}btn_qingk_nor.png" /></div>
+<div style="position:absolute;left:21px;top:136px;"><img id="deleteAll" src="${imagePath}btn_qingk_nor.png" /></div>
 
 <!-- 空格 -->
-<div style="position:absolute;left:180px;top:113px;"><img id="space" src="${imagePath}btn_kongge_nor.png" /></div>
+<div style="position:absolute;left:89px;top:136px;"><img id="space" src="${imagePath}btn_kongge_nor.png" /></div>
 
 <!-- 退格 -->
-<div style="position:absolute;left:300px;top:113px;"><img id="delete" src="${imagePath}btn_tuige_nor.png" /></div>
+<div style="position:absolute;left:157px;top:136px;"><img id="delete" src="${imagePath}btn_tuige_nor.png" /></div>
 
 
 <!-- 半透明遮罩 -->
-<div id="ms" style="position:absolute;left:60px;top:92px;width:350px;height:460px;background-color:#c7bbb9;opacity:0.00;"  ></div>
+<%--<div id="ms" style="position:absolute;left:60px;top:92px;width:350px;height:460px;background-color:#c7bbb9;opacity:0.00;"  ></div>--%>
 
 
 <!-- T9 -->
-<div id="t9" style="position:absolute;left:60px;top:193px;width:347px;height:347px;display:block;">
-<!-- 1 -->
-<div id="t9_key_01_div" style="left:0px;top:0px;"><img id="t9_key_01" src="${imagePath}t9/btn_no01_nor.png" /></div>
+<div id="t9" style="position:absolute;left:21px;top:182px;width:197px;height:197px;display:block;">
+	<!-- 1 -->
+	<div id="t9_key_01_div" style="left:0px;top:0px;"><img id="t9_key_01" src="${imagePath}t9/btn_no01_nor.png" /></div>
 
-<!-- 4 -->
-<div id="t9_key_04_div" style="left:0px;top:120px;"><img id="t9_key_04" src="${imagePath}t9/btn_no04_nor.png" /></div>
+	<!-- 4 -->
+	<div id="t9_key_04_div" style="left:0px;top:68px;"><img id="t9_key_04" src="${imagePath}t9/btn_no04_nor.png" /></div>
 
-<!-- 7 -->
-<div  id="t9_key_07_div" style="left:0px;top:240px;"><img id="t9_key_07" src="${imagePath}t9/btn_no07_nor.png" /></div>
+	<!-- 7 -->
+	<div  id="t9_key_07_div" style="left:0px;top:136px;"><img id="t9_key_07" src="${imagePath}t9/btn_no07_nor.png" /></div>
 
-<!-- 2 -->
-<div id="t9_key_02_div" style="left:120px;top:0px;"><img id="t9_key_02" src="${imagePath}t9/btn_no02_nor.png" /></div>
+	<!-- 2 -->
+	<div id="t9_key_02_div" style="left:68px;top:0px;"><img id="t9_key_02" src="${imagePath}t9/btn_no02_nor.png" /></div>
 
-<!-- 5 -->
-<div id="t9_key_05_div"  style="left:120px;top:120px;"><img id="t9_key_05" src="${imagePath}t9/btn_no05_nor.png" /></div>
+	<!-- 5 -->
+	<div id="t9_key_05_div"  style="left:68px;top:68px;"><img id="t9_key_05" src="${imagePath}t9/btn_no05_nor.png" /></div>
 
-<!-- 8 -->
-<div  id="t9_key_08_div" style="left:120px;top:240px;"><img id="t9_key_08" src="${imagePath}t9/btn_no08_nor.png" /></div>
+	<!-- 8 -->
+	<div  id="t9_key_08_div" style="left:68px;top:136px;"><img id="t9_key_08" src="${imagePath}t9/btn_no08_nor.png" /></div>
 
-<!-- 3 -->
-<div id="t9_key_03_div" style="left:240px;top:0px;"><img id="t9_key_03" src="${imagePath}t9/btn_no03_nor.png" /></div>
+	<!-- 3 -->
+	<div id="t9_key_03_div" style="left:136px;top:0px;"><img id="t9_key_03" src="${imagePath}t9/btn_no03_nor.png" /></div>
 
-<!-- 6 -->
-<div id="t9_key_06_div" style="left:240px;top:120px;"><img id="t9_key_06" src="${imagePath}t9/btn_no06_nor.png" /></div>
+	<!-- 6 -->
+	<div id="t9_key_06_div" style="left:136px;top:68px;"><img id="t9_key_06" src="${imagePath}t9/btn_no06_nor.png" /></div>
 
-<!-- 9 -->
-<div id="t9_key_09_div" style="left:240px;top:240px;"><img id="t9_key_09" src="${imagePath}t9/btn_no09_nor.png" /></div>
+	<!-- 9 -->
+	<div id="t9_key_09_div" style="left:136px;top:136px;"><img id="t9_key_09" src="${imagePath}t9/btn_no09_nor.png" /></div>
 
 </div>
 
 <!-- allKEY -->
-<div id="allkey" style="position:absolute;left:60px;top:193px;width:347px;height:347px;display:none;">
+<div id="allkey" style="position:absolute;left:21px;top:182px;width:197px;height:197px;display:none;">
 
-<div style="left:0px;top:0px;"><img id="all_key_a" src="${imagePath}allkey/btn_A_nor.png" /></div>
-<div style="left:60px;top:0px;"><img id="all_key_b" src="${imagePath}allkey/btn_B_nor.png" /></div>
-<div style="left:120px;top:0px;"><img id="all_key_c" src="${imagePath}allkey/btn_C_nor.png" /></div>
-<div style="left:180px;top:0px;"><img id="all_key_d" src="${imagePath}allkey/btn_D_nor.png" /></div>
-<div style="left:240px;top:0px;"><img id="all_key_e" src="${imagePath}allkey/btn_E_nor.png" /></div>
-<div style="left:300px;top:0px;"><img id="all_key_f" src="${imagePath}allkey/btn_F_nor.png" /></div>
+	<div style="left:0px;top:0px;"><img id="all_key_a" src="${imagePath}allkey/btn_A_nor.png" /></div>
+	<div style="left:33px;top:0px;"><img id="all_key_b" src="${imagePath}allkey/btn_B_nor.png" /></div>
+	<div style="left:66px;top:0px;"><img id="all_key_c" src="${imagePath}allkey/btn_C_nor.png" /></div>
+	<div style="left:99px;top:0px;"><img id="all_key_d" src="${imagePath}allkey/btn_D_nor.png" /></div>
+	<div style="left:132px;top:0px;"><img id="all_key_e" src="${imagePath}allkey/btn_E_nor.png" /></div>
+	<div style="left:165px;top:0px;"><img id="all_key_f" src="${imagePath}allkey/btn_F_nor.png" /></div>
 
-<div style="left:0px;top:60px;"><img id="all_key_g" src="${imagePath}allkey/btn_G_nor.png" /></div>
-<div style="left:60px;top:60px;"><img id="all_key_h" src="${imagePath}allkey/btn_H_nor.png" /></div>
-<div style="left:120px;top:60px;"><img id="all_key_i" src="${imagePath}allkey/btn_I_nor.png" /></div>
-<div style="left:180px;top:60px;"><img id="all_key_j" src="${imagePath}allkey/btn_J_nor.png" /></div>
-<div style="left:240px;top:60px;"><img id="all_key_k" src="${imagePath}allkey/btn_K_nor.png" /></div>
-<div style="left:300px;top:60px;"><img id="all_key_l" src="${imagePath}allkey/btn_L_nor.png" /></div>
+	<div style="left:0px;top:33px;"><img id="all_key_g" src="${imagePath}allkey/btn_G_nor.png" /></div>
+	<div style="left:33px;top:33px;"><img id="all_key_h" src="${imagePath}allkey/btn_H_nor.png" /></div>
+	<div style="left:66px;top:33px;"><img id="all_key_i" src="${imagePath}allkey/btn_I_nor.png" /></div>
+	<div style="left:99px;top:33px;"><img id="all_key_j" src="${imagePath}allkey/btn_J_nor.png" /></div>
+	<div style="left:132px;top:33px;"><img id="all_key_k" src="${imagePath}allkey/btn_K_nor.png" /></div>
+	<div style="left:165px;top:33px;"><img id="all_key_l" src="${imagePath}allkey/btn_L_nor.png" /></div>
 
 
-<div style="left:0px;top:120px;"><img id="all_key_m" src="${imagePath}allkey/btn_M_nor.png" /></div>
-<div style="left:60px;top:120px;"><img id="all_key_n" src="${imagePath}allkey/btn_N_nor.png" /></div>
-<div style="left:120px;top:120px;"><img id="all_key_o" src="${imagePath}allkey/btn_O_nor.png" /></div>
-<div style="left:180px;top:120px;"><img id="all_key_p" src="${imagePath}allkey/btn_P_nor.png" /></div>
-<div style="left:240px;top:120px;"><img id="all_key_q" src="${imagePath}allkey/btn_Q_nor.png" /></div>
-<div style="left:300px;top:120px;"><img id="all_key_r" src="${imagePath}allkey/btn_R_nor.png" /></div>
+	<div style="left:0px;top:66px;"><img id="all_key_m" src="${imagePath}allkey/btn_M_nor.png" /></div>
+	<div style="left:33px;top:66px;"><img id="all_key_n" src="${imagePath}allkey/btn_N_nor.png" /></div>
+	<div style="left:66px;top:66px;"><img id="all_key_o" src="${imagePath}allkey/btn_O_nor.png" /></div>
+	<div style="left:99px;top:66px;"><img id="all_key_p" src="${imagePath}allkey/btn_P_nor.png" /></div>
+	<div style="left:132px;top:66px;"><img id="all_key_q" src="${imagePath}allkey/btn_Q_nor.png" /></div>
+	<div style="left:165px;top:66px;"><img id="all_key_r" src="${imagePath}allkey/btn_R_nor.png" /></div>
 
-<div style="left:0px;top:180px;"><img id="all_key_s" src="${imagePath}allkey/btn_S_nor.png" /></div>
-<div style="left:60px;top:180px;"><img id="all_key_t" src="${imagePath}allkey/btn_T_nor.png" /></div>
-<div style="left:120px;top:180px;"><img id="all_key_u" src="${imagePath}allkey/btn_U_nor.png" /></div>
-<div style="left:180px;top:180px;"><img id="all_key_v" src="${imagePath}allkey/btn_V_nor.png" /></div>
-<div style="left:240px;top:180px;"><img id="all_key_w" src="${imagePath}allkey/btn_W_nor.png" /></div>
-<div style="left:300px;top:180px;"><img id="all_key_x" src="${imagePath}allkey/btn_X_nor.png" /></div>
+	<div style="left:0px;top:99px;"><img id="all_key_s" src="${imagePath}allkey/btn_S_nor.png" /></div>
+	<div style="left:33px;top:99px;"><img id="all_key_t" src="${imagePath}allkey/btn_T_nor.png" /></div>
+	<div style="left:66px;top:99px;"><img id="all_key_u" src="${imagePath}allkey/btn_U_nor.png" /></div>
+	<div style="left:99px;top:99px;"><img id="all_key_v" src="${imagePath}allkey/btn_V_nor.png" /></div>
+	<div style="left:132px;top:99px;"><img id="all_key_w" src="${imagePath}allkey/btn_W_nor.png" /></div>
+	<div style="left:165px;top:99px;"><img id="all_key_x" src="${imagePath}allkey/btn_X_nor.png" /></div>
 
-<div style="left:0px;top:240px;"><img id="all_key_y" src="${imagePath}allkey/btn_Y_nor.png" /></div>
-<div style="left:60px;top:240px;"><img id="all_key_z" src="${imagePath}allkey/btn_Z_nor.png" /></div>
-<div style="left:120px;top:240px;"><img id="all_key_1" src="${imagePath}allkey/btn_1_nor.png" /></div>
-<div style="left:180px;top:240px;"><img id="all_key_2" src="${imagePath}allkey/btn_2_nor.png" /></div>
-<div style="left:240px;top:240px;"><img id="all_key_3" src="${imagePath}allkey/btn_3_nor.png" /></div>
-<div style="left:300px;top:240px;"><img id="all_key_4" src="${imagePath}allkey/btn_4_nor.png" /></div>
+	<div style="left:0px;top:132px;"><img id="all_key_y" src="${imagePath}allkey/btn_Y_nor.png" /></div>
+	<div style="left:33px;top:132px;"><img id="all_key_z" src="${imagePath}allkey/btn_Z_nor.png" /></div>
+	<div style="left:66px;top:132px;"><img id="all_key_1" src="${imagePath}allkey/btn_1_nor.png" /></div>
+	<div style="left:99px;top:132px;"><img id="all_key_2" src="${imagePath}allkey/btn_2_nor.png" /></div>
+	<div style="left:132px;top:132px;"><img id="all_key_3" src="${imagePath}allkey/btn_3_nor.png" /></div>
+	<div style="left:165px;top:132px;"><img id="all_key_4" src="${imagePath}allkey/btn_4_nor.png" /></div>
 
-<div style="left:0px;top:300px;"><img id="all_key_5" src="${imagePath}allkey/btn_5_nor.png" /></div>
-<div style="left:60px;top:300px;"><img id="all_key_6" src="${imagePath}allkey/btn_6_nor.png" /></div>
-<div style="left:120px;top:300px;"><img id="all_key_7" src="${imagePath}allkey/btn_7_nor.png" /></div>
-<div style="left:180px;top:300px;"><img id="all_key_8" src="${imagePath}allkey/btn_8_nor.png" /></div>
-<div style="left:240px;top:300px;"><img id="all_key_9" src="${imagePath}allkey/btn_9_nor.png" /></div>
-<div style="left:300px;top:300px;"><img id="all_key_0" src="${imagePath}allkey/btn_0_nor.png" /></div>
+	<div style="left:0px;top:165px;"><img id="all_key_5" src="${imagePath}allkey/btn_5_nor.png" /></div>
+	<div style="left:33px;top:165px;"><img id="all_key_6" src="${imagePath}allkey/btn_6_nor.png" /></div>
+	<div style="left:66px;top:165px;"><img id="all_key_7" src="${imagePath}allkey/btn_7_nor.png" /></div>
+	<div style="left:99px;top:165px;"><img id="all_key_8" src="${imagePath}allkey/btn_8_nor.png" /></div>
+	<div style="left:132px;top:165px;"><img id="all_key_9" src="${imagePath}allkey/btn_9_nor.png" /></div>
+	<div style="left:165px;top:165px;"><img id="all_key_0" src="${imagePath}allkey/btn_0_nor.png" /></div>
 </div>
 
 
-<div id="mosha" style="position:absolute;left:0px;top:90px;visibility: hidden;" ><img src="${imagePath}bg_sousuo_mohu.png" /></div>
+<div id="mosha" style="position:absolute;left:20px;top:124px;visibility: hidden;z-index:-1;" ><img src="${imagePath}bg_sousuo_mohu.png" /></div>
 
 <!-- T9 全健盘 占位 -->
-<div  style="position:absolute;left:62px;top:552px;width:165px;height:65px;" ><img id="t9button" src="${touming}" width="175px" height="65px" /></div>
-<div  style="position:absolute;left:236px;top:552px;width:165px;height:65px;" ><img id="allkeybutton" src="${touming}"  width="175px" height="65px" /> </div>
+<div  style="position:absolute;left:22px;top:397px;width:98px;height:38px;" ><img id="t9button" src="${touming}" width="98px" height="100%" /></div>
+<div  style="position:absolute;left:120px;top:397px;width:98px;height:38px;" ><img id="allkeybutton" src="${touming}"  width="98" height="100%" /> </div>
 
 <!-- T9 全健盘 -->
-<div style="position:absolute;left:64px;top:553px;width:347px;height:67px;">
-<img src = "${imagePath}bg_jianpan_qiehuan_nor.png" />
-<div style="left:172px;top:25px;" ><img src="${imagePath}line.png" /></div>
-<div id="t9buttondiv" style="left:50px;top:18px;font-size:23px;color:#6aa6ff" >T9键盘</div>
-<div id="allkeybuttondiv" style="left:220px;top:18px;font-size:23px;" >全键盘</div>
+<div style="position:absolute;left:22px;top:397px;width:196px;height:38px;">
+	<img src = "${imagePath}bg_jianpan_qiehuan_nor.png" />
+	<div style="left:50%;top:13px;" ><img src="${imagePath}line.png" /></div>
+	<div id="t9buttondiv" style="left:0;top:0;width:50%;height:100%;text-align:center;line-height:38px;font-size:12px;color:#67a4ff" >T9键盘</div>
+	<div id="allkeybuttondiv" style="left:50%;top:0;width:50%;height:100%;text-align:center;line-height:38px;font-size:12px;color:#f0f0f0" >全键盘</div>
 </div>
 
 
 <div id="recommendAndSearchDiv" style="position:absolute;left:0px;top:0px;">
 <c:forEach items="${recommendList}" var="p" varStatus="vs">
 <div class="recommend_${vs.index}_img">
-<img  src="${basePath}${p.linkImageUri}" />
+<img  src="${basePath}${p.linkImageUri}" width="100%" height="100%" />
 </div>
 <div class="recommend_${vs.index}_div">
-<img id="recommend_${vs.index}" src="${touming}" width="257px" height="150px;" />
+<img id="recommend_${vs.index}" src="${touming}" width="100%" height="100%" />
 </div>
 </c:forEach>
 </div>
@@ -969,8 +967,8 @@ window.onload=function()
 <!-- 搜索排行 -->
 <c:forEach items="${searchRankList}" var="p" varStatus="vs" begin="0" end="7">
 <div class="searchRank_${vs.index}_div">
-<img id="searchRank_${vs.index}" src="${touming}" width="307px" height="65px"  />
-<div style="position:absolute;top:0px;left:20px;color:white;font-size:21px;text-align:left;width:307px;height:65px;line-height:65px;">${vs.index+1}.${p.label}</div>
+<img id="searchRank_${vs.index}" src="${touming}" width="100%" height="100%" />
+<div style="position:absolute;top:0px;left:10px;color:#f0f0f0;font-size:14px;text-align:left;width:163px;height:100%;line-height:37px;">${vs.index+1}.${p.label}</div>
 </div>
 </c:forEach>
 <%@include file="/com/com_bottom.jsp"%>
