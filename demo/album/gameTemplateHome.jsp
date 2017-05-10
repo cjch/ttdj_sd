@@ -221,14 +221,14 @@
 	</div>
 
 
-	<div style="position:absolute;left:0px;top:40px;font-size:28px;line-height:80px;width:205px;text-align:right;">
+	<div style="position:absolute;left:0px;top:40px;font-size:26px;line-height:80px;width:205px;text-align:right;">
 	<b>${epg.title}</b>
 	</div>
 
-	<div style="position:absolute;left:60px;top:145px;font-size:24px;line-height:31px;width:150px;text-align:right;color:#6aa6ff;">
+	<div style="position:absolute;left:60px;top:145px;font-size:20px;line-height:31px;width:150px;text-align:right;color:#6aa6ff;">
 	游戏简介
 	</div>
-	<div style="position:absolute;left:60px;top:145px;font-size:24px;line-height:31px;width:150px;text-align:right;color:#6aa6ff;">
+	<div style="position:absolute;left:60px;top:145px;font-size:20px;line-height:31px;width:150px;text-align:right;color:#6aa6ff;">
 	<img id="intro" src="${touming}" width="170px" height="60px" />
 	</div>
 
@@ -268,7 +268,7 @@
 	<img src="${basePath}${p.thumbHD}" style="width:150px;height:84px;"/>
 	</div>
 	<div style="background-color: #505275; bottom:18px;left:0px;width:90px;height:20px;opacity:0.50;font-size:14px;" >播放：${p.hits}</div>
-	<div id="vedio_${vs.index}_txt"  style="background-color: #505275; top:66px;left:0px;width:150px;height:20px;line-height:20px;padding-left:20px;overflow:hidden;" >${p.name}</div>
+	<div id="vedio_${vs.index}_txt"  style="background-color: #505275; top:66px;left:-2px;width:150px;height:20px;line-height:20px;padding-left:12px;overflow:hidden;" >${p.name}</div>
 	</div>
 	</c:forEach>
 

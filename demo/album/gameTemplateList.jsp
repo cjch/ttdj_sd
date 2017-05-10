@@ -29,7 +29,7 @@
 		background: transparent url('${basePath}${epg.thumbBig}') no-repeat;
 		font-family:"Microsoft YaHei";
 	}
-	
+
 
 #vedio_0_div{position:absolute;left:300px;top:105px;width:201px;height:143px;}
 #vedio_1_div{position:absolute;left:538px;top:105px;width:201px;height:143px;}
@@ -46,30 +46,30 @@
 #vedio_10_div{position:absolute;left:776px;top:503px;width:201px;height:143px;}
 #vedio_11_div{position:absolute;left:1014px;top:503px;width:201px;height:143px;}
 
-#vedio_0{position:absolute;left:285px;top:92px;width:230px;height:167px;}
-#vedio_1{position:absolute;left:523px;top:92px;width:230px;height:167px;}
-#vedio_2{position:absolute;left:761px;top:92px;width:230px;height:167px;}
-#vedio_3{position:absolute;left:1000px;top:92px;width:230px;height:167px;}
+#vedio_0{position:absolute;left:288px;top:96px;width:173px;height:100px;}
+#vedio_1{position:absolute;left:526px;top:96px;width:173px;height:100px;}
+#vedio_2{position:absolute;left:764px;top:96px;width:173px;height:100px;}
+#vedio_3{position:absolute;left:1002px;top:96px;width:173px;height:100px;}
 
-#vedio_4{position:absolute;left:285px;top:291px;width:230px;height:167px;}
-#vedio_5{position:absolute;left:523px;top:291px;width:230px;height:167px;}
-#vedio_6{position:absolute;left:761px;top:291px;width:230px;height:167px;}
-#vedio_7{position:absolute;left:1000px;top:291px;width:230px;height:167px;}
+#vedio_4{position:absolute;left:288px;top:296px;width:173px;height:100px;}
+#vedio_5{position:absolute;left:526px;top:296px;width:173px;height:100px;}
+#vedio_6{position:absolute;left:764px;top:296px;width:173px;height:100px;}
+#vedio_7{position:absolute;left:1002px;top:296px;width:173px;height:100px;}
 
-#vedio_8{position:absolute;left:285px;top:491px;width:230px;height:167px;}
-#vedio_9{position:absolute;left:523px;top:491px;width:230px;height:167px;}
-#vedio_10{position:absolute;left:761px;top:491px;width:230px;height:167px;}
-#vedio_11{position:absolute;left:1000px;top:491px;width:230px;height:167px;}
+#vedio_8{position:absolute;left:288px;top:495px;width:173px;height:100px;}
+#vedio_9{position:absolute;left:526px;top:495px;width:173px;height:100px;}
+#vedio_10{position:absolute;left:764px;top:495px;width:173px;height:100px;}
+#vedio_11{position:absolute;left:1002px;top:495px;width:173px;height:100px;}
 
 </style>
-<script type="text/javascript">	
+<script type="text/javascript">
 	var naviList = [];
 	var type = '${type}';
 	<c:forEach items="${naviList}" var="p" varStatus="vs">
 		naviList.push('${p}');
 	</c:forEach>
 	var currentNavi = naviList[parseInt(type)];
-	
+
 	var buttons = [
 		{id:'intro',name:'游戏简介',action:goHome,left:[''], right:['vedio_0'], up:'search', down:'navi_0',linkImage:'${touming}', focusImage:'${templateImagePath}bg_belan_sel.png'},
 		{id:'fav',name:'收藏',action:goFav,left:['navi_0'], right:[''], up:'', down:'vedio_0',linkImage:'${touming}', focusImage:'${templateImagePath}btn_save_sel.png'},
@@ -77,35 +77,35 @@
 		{id:'navi_${vs.index}',name:'导航${vs.index}',type:'${vs.index}',action:goList,left:[''], right:['vedio_0'], up:['navi_${vs.index-1}','intro'], down:'navi_${vs.index+1}',linkImage:'${touming}', focusImage:'${templateImagePath}bg_belan_sel.png'},
 		</c:forEach>
 		<c:forEach items="${pb.dataList}" var="p" varStatus="vs">
-		{id:'vedio_${vs.index}',name:'列表${vs.index}',code:'${p.code}',index:'${vs.index}',action:goPlay,left:['${vs.index%4==0?'navi_0':''}','vedio_${vs.index-1}'], right:'vedio_${vs.index+1}', up:['vedio_${vs.index-4}','fav'], down:'vedio_${vs.index+4}',linkImage:'${touming}', focusImage:'${templateImagePath}button.png',focusHandler:marquess,blurHandler:stopmarquess,beforeMove:pn}, 
+		{id:'vedio_${vs.index}',name:'列表${vs.index}',code:'${p.code}',index:'${vs.index}',action:goPlay,left:['${vs.index%4==0?'navi_0':''}','vedio_${vs.index-1}'], right:'vedio_${vs.index+1}', up:['vedio_${vs.index-4}','fav'], down:'vedio_${vs.index+4}',linkImage:'${touming}', focusImage:'${templateImagePath}button.png',focusHandler:marquess,blurHandler:stopmarquess,beforeMove:pn},
 		</c:forEach>
 	]
-		
+
 	function marquess(button){
 		Epg.marquee.start(11,button.id+"_txt",7,80,'left','scroll');
 	}
-	
+
 	function stopmarquess(button){
-		
+
 		Epg.marquee.stop();
 	}
-	
+
 	function goFav(button){
-		
+
 	}
-	
+
 	function goHome(button){
 		location.href = 'gameTemplate.jsp?code=${target}';
 	}
-	
+
 	function goList(button){
 		location.href = 'gameTemplate.jsp?method=list&code=${target}&f='+button.id+'&type='+button.type;
 	}
-	
+
 	function goPlay(button){
 		playVideo(button.code, '');
 	}
-	
+
 	//判断是否去上一页下一页
 	function pn(dir,button){
 		var currentPage = parseInt('${pb.current}');
@@ -121,7 +121,7 @@
 				}
 			}
 		}
-		
+
 		if(button.index > 7){
 			//说明是最下面一排
 			if(dir == 'down'){
@@ -134,7 +134,7 @@
 			}
 		}
 	}
-	
+
 	function goColumn(button){
 		if(button.id=="search"){
 			var backURI  = escape("${currentURI}&f=search&dir=fallback");
@@ -145,12 +145,12 @@
 	function back(){
 		location.href = "${currentURI}";
 	}
-	
+
 	Epg.key.set(
 	{
 		KEY_BACK:'back()',
 	});
-	
+
 	window.onload=function()
 	{
 		G("title").innerHTML = currentNavi+'视频(第${pb.current}/${pb.pageCount}页)';
@@ -164,53 +164,52 @@
 	<!-- line -->
 	<div style="position:absolute;left:60px;top:145px;">
 	<img src="${templateImagePath}line_blue.png" width="1px" height ="${720-145}px"/>
-	</div>	
-	
-	
-	<div style="position:absolute;left:0px;top:40px;font-size:33px;line-height:80px;width:205px;text-align:right;font-family:'Microsoft YaHei'">
+	</div>
+
+
+	<div style="position:absolute;left:0px;top:40px;font-size:26px;line-height:80px;width:205px;text-align:right;font-family:'Microsoft YaHei'">
 	<b>${epg.title}</b>
-	</div>	
-	
-	<div style="position:absolute;left:60px;top:130px;font-size:24px;line-height:31px;width:150px;text-align:right;color:#6aa6ff;">
+	</div>
+
+	<div style="position:absolute;left:60px;top:130px;font-size:20px;line-height:31px;width:150px;text-align:right;color:#6aa6ff;">
 	<img id="intro" src="${touming}" width="170px" height="60px" />
-	</div>	
-	<div style="position:absolute;left:60px;top:145px;font-size:24px;line-height:31px;width:150px;text-align:right;font-family:'Microsoft YaHei'">
+	</div>
+	<div style="position:absolute;left:60px;top:145px;font-size:20px;line-height:31px;width:150px;text-align:right;font-family:'Microsoft YaHei'">
 	游戏简介
 	</div>
 
-	
-	<div id="title" style="position:absolute;top:39px;left:300px;font-size:20px;color:#788195;line-height:40px;text-align:left;">视频</div>		
 
-	
+	<div id="title" style="position:absolute;top:39px;left:300px;font-size:20px;color:#788195;line-height:40px;text-align:left;">视频</div>
+
+
 	<div id="navi" style="position:absolute;left:60px;top:200px;width:170px;height:515px;overflow:hidden;">
 	<c:forEach items="${naviList}" var="p" varStatus="vs" begin="0" end="6" >
-		<div style="position:absolute;left:0px;top:${vs.index*75}px;font-size:24px;line-height:31px;text-align:right;width:150px;">
+		<div style="position:absolute;left:0px;top:${vs.index*75}px;font-size:14px;line-height:31px;text-align:right;width:150px;">
 		<img id="navi_${vs.index}" src="${touming}" width="170px" height="60px" />
-		</div>	
+		</div>
 	</c:forEach>
 	<c:forEach items="${naviList}" var="p" varStatus="vs">
-		<div id="navi_txt_${vs.index}" style="position:absolute;left:0px;top:${18+vs.index*75}px;font-size:24px;line-height:31px;text-align:right;width:150px;">
+		<div id="navi_txt_${vs.index}" style="position:absolute;left:0px;top:${18+vs.index*75}px;font-size:14px;line-height:31px;text-align:right;width:150px;">
 		${p}
-		</div>	
+		</div>
 	</c:forEach>
 	</div>
 
-	
+
 	<c:forEach items="${pb.dataList}" var="p" varStatus="vs">
-	<div id="vedio_${vs.index}_div">
+	<div id="vedio_${vs.index}_div" style="width:150px;height:84px;overflow:hidden;">
 	<div style="left:0px;top:0px;">
-	<img src="${basePath}${p.thumbHD}" width="201px" height ="113px"/>
-	</div>	
-	<div style="background-color: #505275; top:93px;left:0px;width:90px;height:20px;opacity:0.50;font-size:14px;" >播放：${p.hits}</div>
-	<div id="vedio_${vs.index}_txt"  style="background-color: #505275; top:113px;left:0px;width:201px;height:30px;line-height:30px;padding-left:10px;overflow:hidden;" >${p.name}</div>
+	<img src="${basePath}${p.thumbHD}" width="150px" height ="84px"/>
+	</div>
+	<div style="background-color: #505275; top:45px;left:0px;padding-left:2px;width:90px;height:20px;opacity:0.50;font-size:14px;" >播放：${p.hits}</div>
+	<div id="vedio_${vs.index}_txt"  style="background-color: #505275; top:65px;left:-2px;width:150px;height:20px;line-height:20px;padding-left:12px;overflow:hidden;" >${p.name}</div>
 	</div>
 	</c:forEach>
-	 
+
 	<c:forEach items="${pb.dataList}" var="p" varStatus="vs">
 		<img id="vedio_${vs.index}" src="${touming}" width="235px" height ="167px"/>
 	</c:forEach>
 	<%@include file="/com/com_bottom.jsp"%>
-	
+
 </body>
 </html>
-
