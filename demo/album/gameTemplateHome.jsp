@@ -57,15 +57,15 @@
 #vedio_6_div{position:absolute;left:776px;top:550px;width:150px;height:85px;}
 #vedio_7_div{position:absolute;left:1014px;top:550px;width:150px;height:85px;}
 
-#vedio_0{position:absolute;left:288px;top:370px;width:174px;height:101px;}
-#vedio_1{position:absolute;left:526px;top:370px;width:174px;height:101px;}
-#vedio_2{position:absolute;left:764px;top:370px;width:174px;height:101px;}
-#vedio_3{position:absolute;left:1002px;top:370px;width:174px;height:101px;}
+#vedio_0{position:absolute;left:288px;top:370px;width:173px;height:100px;}
+#vedio_1{position:absolute;left:526px;top:370px;width:173px;height:100px;}
+#vedio_2{position:absolute;left:764px;top:370px;width:173px;height:100px;}
+#vedio_3{position:absolute;left:1002px;top:370px;width:173px;height:100px;}
 
-#vedio_4{position:absolute;left:288px;top:542px;width:174px;height:101px;}
-#vedio_5{position:absolute;left:526px;top:542px;width:174px;height:101px;}
-#vedio_6{position:absolute;left:764px;top:542px;width:174px;height:101px;}
-#vedio_7{position:absolute;left:1002px;top:542px;width:174px;height:101px;}
+#vedio_4{position:absolute;left:288px;top:542px;width:173px;height:100px;}
+#vedio_5{position:absolute;left:526px;top:542px;width:173px;height:100px;}
+#vedio_6{position:absolute;left:764px;top:542px;width:173px;height:100px;}
+#vedio_7{position:absolute;left:1002px;top:542px;width:173px;height:100px;}
 
 </style>
 <script src="${basePath}resources/js/jquery-v2.1.1.js"></script>
