@@ -17,9 +17,9 @@
 				return true;
 			}
 		}
-		
+
 		return false;
-		
+
 	}
 
 
@@ -75,7 +75,7 @@
 	{
 		return getProgramId(programCode, 0, 0);
 	}
-	
+
 	/**
 	 * 根据当前页面计算得出相应的图片路径，要求按照指定规则存放图片
 	 * 如果碰到特殊情况返回的图片路径不正确，可以手动重新指定图片路径
@@ -130,7 +130,7 @@
 		}
 		return rc;
 	}
-	
+
 	/**
 	 * 给request批量设置attr
 	 * @param request
@@ -146,7 +146,7 @@
 		for(int i=0;i<objs.length;i+=2)
 			request.setAttribute((String)objs[i], objs[i+1]);
 	}
-	
+
 	/**
 	 * 解析最简单的XML，如解析“<div>abc</div>”
 	 * @param xml 需要解析的xml字符串
@@ -157,7 +157,7 @@
 	{
 		 return StringUtil.parseSimpleXML(xml, node);
 	}
-	 
+
 	/**
 	 * 获取参数，不存在返回默认值
 	 */
@@ -165,7 +165,7 @@
 	{
 		return HttpUtil.getParam(request, paramName, defaultValue);
 	}
-	
+
 	/**
 	 * 获取参数
 	 */
@@ -173,7 +173,7 @@
 	{
 		return HttpUtil.getParam(request, paramName);
 	}
-	
+
 	/**
 	 * 从request中获取一个参数并强转int，不存在时返回默认值
 	 */
@@ -181,7 +181,7 @@
 	{
 		return HttpUtil.getParamInt(request, name, defaultValue);
 	}
-	
+
 	/**
 	 * 从request中获取一个参数并强转int
 	 */
@@ -189,7 +189,7 @@
 	{
 		return HttpUtil.getParamInt(request, name);
 	}
-	
+
 	/**
 	 * 从request中获取一个参数并强转boolean，不存在时返回默认值
 	 */
@@ -197,7 +197,7 @@
 	{
 		return HttpUtil.getParamBoolean(request, name, defaultValue);
 	}
-	
+
 	/**
 	 * 从request中获取一个参数并强转boolean
 	 */
@@ -205,7 +205,7 @@
 	{
 		return HttpUtil.getParamBoolean(request, name);
 	}
-	
+
 	/**
 	 * 重定向，path放在最后面是为了兼容以前的代码
 	 */
@@ -213,7 +213,7 @@
 	{
 		HttpUtil.redirect(path, request, response);
 	}
-	
+
 	/**
 	 * 请求转发，path放在最后面是为了兼容以前的代码
 	 */
@@ -221,7 +221,7 @@
 	{
 		HttpUtil.forward(path, request, response);
 	}
-	
+
 	/**
 	 * 判断一个字符串是否为空
 	 * @param str
@@ -231,7 +231,7 @@
 	{
 		return StringUtil.isEmpty(str);
 	}
-	
+
 	/**
 	 * 判断一个字符串是否不为空
 	 * @param str
@@ -241,7 +241,7 @@
 	{
 		return StringUtil.notEmpty(str);
 	}
-	
+
 	/**
 	 * URL编码，主要是处理中文
 	 * @param str
@@ -251,7 +251,7 @@
 	{
 		return URLUtil.encode(str);
 	}
-	
+
 	/**
 	 * URL解码，主要是处理中文
 	 * @param str
@@ -261,7 +261,7 @@
 	{
 		return URLUtil.decode(str);
 	}
-	
+
 	/**
 	 * 获取cookie
 	 * @param request
@@ -273,7 +273,7 @@
 	{
 		return CookieUtil.get(request, names);
 	}
-	
+
 	/**
 	 * 获取cookie
 	 * @param request
@@ -285,7 +285,7 @@
 	{
 		return CookieUtil.get(request, name, defaultValue);
 	}
-	
+
 	/**
 	 * 批量设置cookie
 	 * @param request
@@ -298,7 +298,7 @@
 	{
 		return CookieUtil.set(request, response, days, params);
 	}
-	
+
 	/**
 	 * 批量设置cookie，默认30天
 	 * @param request
@@ -310,7 +310,7 @@
 	{
 		return CookieUtil.set(request, response, params);
 	}
-	
+
 	/**
 	 * 批量删除Cookie
 	 * @param response
@@ -321,7 +321,7 @@
 	{
 		return CookieUtil.del(request, response, names);
 	}
-	
+
 	/**
 	 * 获取backURI参数
 	 * @param request
@@ -332,7 +332,7 @@
 		String userId = getCookie(request, "userid", "");
 		return HttpUtils.markURIList(request, API_URL, userId, "backURI");
 	}
-	
+
 	/**
 	 * 获取项目基路径
 	 * @param request
@@ -341,7 +341,7 @@
 	{
 		return HttpUtil.getBasePath(request);
 	}
-	
+
 	/**
 	 * POST提交调用接口，可结合api-client一起使用
 	 * @param url API地址，无须写地址前缀
@@ -354,7 +354,7 @@
 			url = API_URL + url;
 		return HttpUtil.postJson(url, cls, params);
 	}
-	
+
 	/**
 	 * 根据节目单code获取dataList，并且从中随机取出不重复的maxSize个数据
 	 * @param programCode 节目单code，即栏目code
@@ -388,7 +388,7 @@
 		List dataList = new ArrayList(map.values());
 		return dataList;
 	}
-	
+
 	/**
 	 * 根据节目单code获取dataList，并且从中随机取出不重复的4个数据
 	 * @param programCode 节目单code，即栏目code
@@ -398,7 +398,7 @@
 	{
 		return getRandomDataList(programCode, null);
 	}
-	
+
 	/**
 	 * 根据账户ID获取城市code
 	 * @param user_id
@@ -410,7 +410,7 @@
 				return CITYS[i][1];
 		return DEFAULT_CITY_CODE;
 	}
-	
+
 	/**
 	 * 根据城市code获取城市中文名
 	 * @param cityCode 城市code
@@ -422,7 +422,7 @@
 				return CITYS[i][2];
 		return DEFAULT_CITY_NAME;
 	}
-	
+
 	/**
 	 * 获取用户属性编码
 	 */
@@ -444,7 +444,7 @@
 		userProp += "000000000000";//剩余的12位补充0
 		return userProp;
 	}
-	
+
 	/**
 	 * 获取当前页面属性，共16位
 	 * @param targetType 页面类型
@@ -473,7 +473,7 @@
 		pageProp += "0000000000";//剩余10位用0填充
 		return pageProp;
 	}
-	
+
 	/**
 	 * 获取当前页面属性，共16位
 	 * @param targetType 页面类型
@@ -482,7 +482,7 @@
 	{
 		return getPageProp(targetType, null);
 	}
-	
+
 	/**
 	 * 从session,cookie中获取user_id
 	 * @param request
@@ -496,7 +496,7 @@
         }
         return user_id;
 	}
-  	
+
 	/**
 	 * 从cookie中获取角色名
 	 * @param request
@@ -506,11 +506,11 @@
 	{
 		String role_name=(String)request.getSession().getAttribute("role_name");
         if("".equals(role_name)||role_name==null){//session中取不到则去cookie里取
-        	role_name=getCookie(request,COOKIE_ROLE, ""); 
+        	role_name=getCookie(request,COOKIE_ROLE, "");
         }
         return role_name;
 	}
-	
+
 	/**
 	 * 从Cookie中获取订购类型
 	 */
@@ -518,11 +518,11 @@
 	{
 		String order_type=(String)request.getSession().getAttribute("order_type");
         if("".equals(order_type)||order_type==null){//session中取不到则去cookie里取
-        	order_type=getCookie(request,COOKIE_ORDER_TYPE, ""); 
+        	order_type=getCookie(request,COOKIE_ORDER_TYPE, "");
         }
         return order_type;
 	}
-	
+
 	/**
 	 * 从Cookie中获取城市code
 	 */
@@ -530,11 +530,11 @@
 	{
 		String city_code=(String)request.getSession().getAttribute("city_code");
         if("".equals(city_code)||city_code==null){//session中取不到则去cookie里取
-        	city_code=getCookie(request,COOKIE_CITY_CODE, ""); 
+        	city_code=getCookie(request,COOKIE_CITY_CODE, "");
         }
         return city_code;
 	}
-	
+
 	public String getUserToken(HttpServletRequest request,HttpServletResponse response){
         String userToken=(String)request.getSession().getAttribute("userToken");
         if("".equals(userToken)||userToken==null){//session中取不到则去cookie里取
@@ -542,7 +542,7 @@
         }
         return userToken;
     }
-	
+
 %>
 <%
 	//漏洞脚本注入问题处理
