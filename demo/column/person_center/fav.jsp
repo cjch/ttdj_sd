@@ -3,11 +3,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="/tags/epg" prefix="epg" %>
 <%@ taglib tagdir="/WEB-INF/tags/epg" prefix="e" %>
-<title>个人中心-观看记录</title>
+<title>个人中心-我的收藏</title>
 <%!
 	public static final String COLUMN_CODE = "person_center";//首页栏目code
 	public static final String CURRENT_URI = BASE_PATH + "column/person_center/index.jsp?method=fav";//当前页面访问地址
-%>	
+%>
 
 <%
 	imagePath = BASE_IMAGE_PATH + "column/person_center/";//修正栏目图片路径
@@ -33,11 +33,11 @@ body{
 	background: transparent url('${comImagePath}bg.jpg') no-repeat;
 }
 
-#myacount_img{position:absolute;left:61px;top:145px;width:163px;height:40px;text-align:center;color:#788195;font-size:18px;;line-height:40px;}
-#history_img{position:absolute;left:61px;top:190px;width:163px;height:73px;}
-#fav_img{position:absolute;left:61px;top:263px;width:163px;height:73px;}
-#activity_img{position:absolute;left:61px;top:336px;width:163px;height:73px;}
-#help_img{position:absolute;left:61px;top:409px;width:163px;height:73px;}
+#myacount_img{position:absolute;left:0;top:145px;font-size:18px;font-weight:500;width:150px;height:70px;text-align:center;color:#788195;font-size:18px;;line-height:30px;}
+#history_img{position:absolute;left:0;top:190px;font-size:18px;font-weight:500;width:150px;height:70px;}
+#fav_img{position:absolute;left:0;top:263px;font-size:18px;font-weight:500;width:150px;height:70px;}
+#activity_img{position:absolute;left:0;top:336px;font-size:18px;font-weight:500;width:150px;height:70px;}
+#help_img{position:absolute;left:0;top:409px;font-size:18px;font-weight:500;width:150px;height:70px;}
 .novi_nor{width:121px;height:47px;text-align:right;color:#788195;font-size:25px;line-height:73px;}
 .novi_focus{width:121px;height:47px;text-align:right;color:#f0f0f0;font-size:25px;;line-height:73px;}
 .novi_sel{width:121px;height:47px;text-align:right;color:#f0f0f0;font-size:25px;line-height:73px;background-color: #0062eb; }
@@ -57,23 +57,24 @@ body{
 #history_10_img{position:absolute;left:776px;top:503px;width:201px;height:113px;}
 #history_11_img{position:absolute;left:1014px;top:503px;width:201px;height:113px;}
 
-#history_0{position:absolute;left:280px;top:88px;width:240px;height:178px;}
-#history_1{position:absolute;left:518px;top:88px;width:240px;height:178px;}
-#history_2{position:absolute;left:756px;top:88px;width:240px;height:178px;}
-#history_3{position:absolute;left:994px;top:88px;width:240px;height:178px;}
 
-#history_4{position:absolute;left:280px;top:286px;width:240px;height:178px;}
-#history_5{position:absolute;left:518px;top:286px;width:240px;height:178px;}
-#history_6{position:absolute;left:756px;top:286px;width:240px;height:178px;}
-#history_7{position:absolute;left:994px;top:286px;width:240px;height:178px;}
+#history_0{position:absolute;left:288px;top:97px;width:174px;height:100px;}
+#history_1{position:absolute;left:526px;top:97px;width:174px;height:100px;}
+#history_2{position:absolute;left:764px;top:97px;width:174px;height:100px;}
+#history_3{position:absolute;left:1002px;top:97px;width:174px;height:100px;}
 
-#history_8{position:absolute;left:280px;top:485px;width:240px;height:178px;}
-#history_9{position:absolute;left:518px;top:485px;width:240px;height:178px;}
-#history_10{position:absolute;left:756px;top:485px;width:240px;height:178px;}
-#history_11{position:absolute;left:994px;top:485px;width:240px;height:178px;}
+#history_4{position:absolute;left:288px;top:296px;width:174px;height:100px;}
+#history_5{position:absolute;left:526px;top:296px;width:174px;height:100px;}
+#history_6{position:absolute;left:764px;top:296px;width:174px;height:100px;}
+#history_7{position:absolute;left:1002px;top:296px;width:174px;height:100px;}
+
+#history_8{position:absolute;left:288px;top:495px;width:174px;height:100px;}
+#history_9{position:absolute;left:526px;top:495px;width:174px;height:100px;}
+#history_10{position:absolute;left:764px;top:495px;width:174px;height:100px;}
+#history_11{position:absolute;left:1002px;top:495px;width:174px;height:100px;}
 
 </style>
-<script type="text/javascript">	
+<script type="text/javascript">
 
 	var currentNavi = "fav";
 
@@ -82,46 +83,46 @@ body{
 		{id:'fav',name:'我的收藏',action:goColumn,left:[''], right:['history_0'], up:'history', down:'activity',linkImage:'${touming}', focusImage:'${touming}',focusHandler:focusChangClass,blurHandler:blurChangClass},
 		{id:'activity',name:'活动公告',action:goColumn,left:[''], right:['history_0'], up:'fav', down:'help',linkImage:'${touming}', focusImage:'${touming}',focusHandler:focusChangClass,blurHandler:blurChangClass},
 		{id:'help',name:'帮助中心',action:goColumn,left:[''], right:['history_0'], up:'activity', down:'',linkImage:'${touming}', focusImage:'${touming}',focusHandler:focusChangClass,blurHandler:blurChangClass},
-		
+
 <c:forEach items="${pb.dataList}" var="p" varStatus="vs">
 		{id:'history_${vs.index}',name:'我的收藏${vs.index}',path:'${p.path}',action:goPlay,left: ['${vs.index%4==0 ? 'history':''}','history_${vs.index - 1}'], right:['history_${vs.index + 1}'], up:'history_${vs.index - 4}', down:'history_${vs.index + 4}',linkImage:'${touming}', focusImage:'${imagePath}button.png',focusHandler:marquess,blurHandler:stopmarquess,beforeMove:pn},
-</c:forEach>		
+</c:forEach>
 	];
-	
-	
+
+
 	function marquess(button){
 		Epg.marquee.start(11,button.id+"_txt",7,50,'left','alternate');
 	}
-	
+
 	function stopmarquess(button){
-		
+
 		Epg.marquee.stop();
 	}
-	
+
 	function pn(dir,button){
-		
+
 		var currentPage = parseInt('${pb.current}');
 		var totalPage = parseInt('${pb.pageCount}');
-		
+
 		if(dir == 'down'){
 			if(totalPage > currentPage &&  button.index > 8){
 				location.href = "index.jsp?method=fav&p=${pb.current+1}";
 			}
 		}
 	}
-	
+
 	var savedClassName ;
 	//导航样式切换
 	function focusChangClass(button){
 		savedClassName = G(button.id+"_img").className;
-		G(button.id+"_img").className = "novi_sel";	
+		G(button.id+"_img").className = "novi_sel";
 	}
 	function blurChangClass(button){
-		G(button.id+"_img").className = savedClassName;	
+		G(button.id+"_img").className = savedClassName;
 	}
-	
+
 	function goColumn(button){
-		
+
 		if(button.id == currentNavi){
 			return;
 		}
@@ -129,7 +130,7 @@ body{
 		location.href = "${basePath}column/person_center/index.jsp?method="+button.id+"&backURI="+backURI;
 		return;
 	}
-	
+
 	function goPlay(button){
 		Epg.go(button.path,'${target}');
 	}
@@ -137,7 +138,7 @@ body{
 	function back(){
 		location.href ="${backURI}" ;
 	}
-	
+
 	window.onload=function()
 	{
 		Epg.tip('${param.info}');//显示info信息，3秒自动隐藏，如果info为空将不会显示
@@ -154,7 +155,7 @@ body{
 <body>
 
 
-<div style="position:absolute;left:0px;top:0px;width:230px;height:720px;background-color: #0b0e34; "></div>
+<div style="position:absolute;left:0px;top:0px;width:150px;height:720px;background-color: #0b0e34; "></div>
 <div  id="myacount_img">
 ID:${userid}
 </div>
@@ -178,9 +179,9 @@ ID:${userid}
 </div>
 
 <!-- line -->
-<div style="position:absolute;left:60px;top:190px;">
+<%-- <div style="position:absolute;left:60px;top:190px;">
 <img src="${imagePath}line.png" width="4px" height ="520px"/>
-</div>
+</div> --%>
 
 <!-- intro -->
 <div class="intro" style="position:absolute;left:217px;top:44px;" >
@@ -194,7 +195,7 @@ ID:${userid}
 <div id="history_${vs.index}_img">
 <div style="left:0px;top:0px;">
 <img src="${basePath}${p.thumb}" width="201px" height ="113px"/>
-</div>	
+</div>
 <div id="history_${vs.index}_txt"  style="background-color: #505275; top:113px;left:0px;width:201px;height:30px;padding-left:10px;" >${p.title}</div>
 </div>
 </c:forEach>
