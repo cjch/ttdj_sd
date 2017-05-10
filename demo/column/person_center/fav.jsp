@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="/tags/epg" prefix="epg" %>
 <%@ taglib tagdir="/WEB-INF/tags/epg" prefix="e" %>
-<title>个人中心-观看记录</title>
+<title>个人中心-我的收藏</title>
 <%!
 	public static final String COLUMN_CODE = "person_center";//首页栏目code
 	public static final String CURRENT_URI = BASE_PATH + "column/person_center/index.jsp?method=fav";//当前页面访问地址
