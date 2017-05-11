@@ -56,7 +56,7 @@
 	body{
 		margin:0;
 		padding:0;
-		color:#FFFFFF;
+		color:#f0f0f0;
 		background: transparent url('${comImagePath}bg_new.jpg') no-repeat;
 	}
 
@@ -125,8 +125,8 @@
 		height: 100%;
 	}
 
-	.wordBg_nor{left:0px;top:0px;width:209px;height:34px;font-size:18px;padding-left:5px;line-height:34px;overflow:hidden;}
-	.wordBg_sel{background-image: url(${imagePath}tab_xuanzhong.png);left:0px;top:0px;width:209px;height:34px;font-size:18px;padding-left:5px;line-height:34px;overflow:hidden;}
+	.wordBg_nor{left:0px;top:0px;width:209px;height:34px;font-size:16px;padding-left:5px;line-height:34px;overflow:hidden;}
+	.wordBg_sel{background-image: url(${imagePath}tab_xuanzhong.png);left:0px;top:0px;width:209px;height:34px;font-size:16px;padding-left:5px;line-height:34px;overflow:hidden;}
 	</style>
 	<script type="text/javascript">	
 	//当前导航

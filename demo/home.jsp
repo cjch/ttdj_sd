@@ -38,7 +38,7 @@
 	body{
 		margin:0;
 		padding:0;
-		color:#FFFFFF;
+		color:#f0f0f0;
 		background: transparent url('${comImagePath}bg_new.jpg') no-repeat;
 	}
 
@@ -431,7 +431,7 @@
 			<img id="recommend_${vs.index}_border_3" style="position: absolute;bottom:-5px;left:-5px;width:20px;visibility:hidden" src="${comImagePath}pic_sel_3.png" alt="">
 			<img id="recommend_${vs.index}_border_4" style="position: absolute;bottom:-5px;right:-5px;width:20px;visibility:hidden" src="${comImagePath}pic_sel_4.png" alt="">
 			<img id="recommend_${vs.index}" class="post_img" src="${touming}" />
-			<img id="play" style="position:absolute;left:259px;top:126px;visibility:hidden" src="${comImagePath}ico_play.png" alt="">
+			<img id="play" style="position:absolute;left:101px;top:58px;visibility:hidden" src="${comImagePath}ico_play.png" alt="">
 		</div>
 	</c:forEach>
 	<div style="position:absolute; left:336px; top:133px; width:606px; height:340px;">

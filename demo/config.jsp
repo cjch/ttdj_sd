@@ -34,7 +34,7 @@
 	public final static String API_URL = "http://192.168.57.201:8091/province-api/";
 
 	/** EPG地址 */
-	public final static String BASE_PATH = "http://172.16.4.4:8080/demo/";
+	public final static String BASE_PATH = "http://127.0.0.1:8080/demo/";
 
 	/**
 	 *	是否是开发模式，这个参数很重要，决定了是否开启鉴权、是否开启console.log、是否启用按5刷新、是否支持Chrome浏览器等等，

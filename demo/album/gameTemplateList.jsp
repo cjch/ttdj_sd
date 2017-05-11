@@ -164,7 +164,7 @@
 		<b>${epg.title}</b>
 	</div>
 
-	<div style="position:absolute;left:0px;top:47px;font-size:14px;line-height:41px;width:91px;text-align:right;font-family:'Microsoft YaHei';">
+	<div style="position:absolute;left:0px;top:47px;z-index:1;font-size:14px;line-height:41px;width:91px;text-align:right;font-family:'Microsoft YaHei';">
 		游戏简介
 	</div>
 	<div style="position:absolute;left:0px;top:47px;font-size:14px;line-height:41px;width:101px;text-align:right;color:#67a4ff;">

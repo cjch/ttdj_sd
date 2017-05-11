@@ -44,7 +44,7 @@
 body{
 	margin:0;
 	padding:0;
-	color:#FFFFFF;
+	color:#f0f0f0;
 	background: transparent url('${comImagePath}bg_search.jpg') no-repeat;
 }
 
