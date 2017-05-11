@@ -29,49 +29,46 @@
 body{
 	margin:0;
 	padding:0;
-	color:#FFFFFF;
-	background: transparent url('${comImagePath}bg.jpg') no-repeat;
+	color:#f0f0f0;
+	background: transparent url('${comImagePath}bg_splist.jpg') no-repeat;
 }
 
-#myacount_img{position:absolute;left:0;top:145px;font-size:18px;font-weight:500;width:150px;height:70px;text-align:center;color:#788195;font-size:18px;;line-height:30px;}
-#history_img{position:absolute;left:0;top:190px;font-size:18px;font-weight:500;width:150px;height:70px;}
-#fav_img{position:absolute;left:0;top:263px;font-size:18px;font-weight:500;width:150px;height:70px;}
-#activity_img{position:absolute;left:0;top:336px;font-size:18px;font-weight:500;width:150px;height:70px;}
-#help_img{position:absolute;left:0;top:409px;font-size:18px;font-weight:500;width:150px;height:70px;}
-.novi_nor{width:121px;height:47px;text-align:right;color:#788195;font-size:25px;line-height:73px;}
-.novi_focus{width:121px;height:47px;text-align:right;color:#f0f0f0;font-size:25px;;line-height:73px;}
-.novi_sel{width:121px;height:47px;text-align:right;color:#f0f0f0;font-size:25px;line-height:73px;background-color: #0062eb; }
-.intro{width:200px;height:44px;text-align:right;color:#788195;font-size:22px;line-height:44px;}
-#history_0_img{position:absolute;left:300px;top:105px;width:201px;height:113px;}
-#history_1_img{position:absolute;left:538px;top:105px;width:201px;height:113px;}
-#history_2_img{position:absolute;left:776px;top:105px;width:201px;height:113px;}
-#history_3_img{position:absolute;left:1014px;top:105px;width:201px;height:113px;}
+#myacount_img{position:absolute;left:0;top:120px;font-size:12px;width:91px;height:41px;text-align:right;color:#788195;line-height:41px;}
+#history_img{position:absolute;left:0;top:161px;font-size:14px;line-height:41px;width:101px;height:41px;}
+#fav_img{position:absolute;left:0;top:202px;font-size:14px;line-height:41px;width:101px;height:41px;}
+#activity_img{position:absolute;left:0;top:243px;font-size:14px;line-height:41px;width:101px;height:41px;}
+#help_img{position:absolute;left:0;top:284px;font-size:14px;line-height:41px;width:101px;height:41px;}
+.novi_nor{text-align:right;color:#788195;}
+.novi_focus{text-align:right;color:#f0f0f0;}
+.novi_sel{text-align:right;color:#f0f0f0;background-color: #0062eb; }
+.intro{color:#f0f0f0;opacity:0.7;font-size:14px;line-height:20px;}
 
-#history_4_img{position:absolute;left:300px;top:304px;width:201px;height:113px;}
-#history_5_img{position:absolute;left:538px;top:304px;width:201px;height:113px;}
-#history_6_img{position:absolute;left:776px;top:304px;width:201px;height:113px;}
-#history_7_img{position:absolute;left:1014px;top:304px;width:201px;height:113px;}
+#history_0_img{position:absolute;left:130px;top:88px;width:150px;height:85px;}
+#history_1_img{position:absolute;left:300px;top:88px;width:150px;height:85px;}
+#history_2_img{position:absolute;left:470px;top:88px;width:150px;height:85px;}
+#history_3_img{position:absolute;left:130px;top:183px;width:150px;height:85px;}
+#history_4_img{position:absolute;left:300px;top:183px;width:150px;height:85px;}
+#history_5_img{position:absolute;left:470px;top:183px;width:150px;height:85px;}
+#history_6_img{position:absolute;left:130px;top:278px;width:150px;height:85px;}
+#history_7_img{position:absolute;left:300px;top:278px;width:150px;height:85px;}
+#history_8_img{position:absolute;left:470px;top:278px;width:150px;height:85px;}
+#history_9_img{position:absolute;left:130px;top:373px;width:150px;height:85px;}
+#history_10_img{position:absolute;left:300px;top:373px;width:150px;height:85px;}
+#history_11_img{position:absolute;left:470px;top:373px;width:150px;height:85px;}
 
-#history_8_img{position:absolute;left:300px;top:503px;width:201px;height:113px;}
-#history_9_img{position:absolute;left:538px;top:503px;width:201px;height:113px;}
-#history_10_img{position:absolute;left:776px;top:503px;width:201px;height:113px;}
-#history_11_img{position:absolute;left:1014px;top:503px;width:201px;height:113px;}
+#history_0{position:absolute;left:118px;top:80px;width:173px;height:100px;}
+#history_1{position:absolute;left:288px;top:80px;width:173px;height:100px;}
+#history_2{position:absolute;left:458px;top:80px;width:173px;height:100px;}
+#history_3{position:absolute;left:118px;top:175px;width:173px;height:100px;}
+#history_4{position:absolute;left:288px;top:175px;width:173px;height:100px;}
+#history_5{position:absolute;left:458px;top:175px;width:173px;height:100px;}
+#history_6{position:absolute;left:118px;top:270px;width:173px;height:100px;}
+#history_7{position:absolute;left:288px;top:270px;width:173px;height:100px;}
+#history_8{position:absolute;left:458px;top:270px;width:173px;height:100px;}
+#history_9{position:absolute;left:118px;top:365px;width:173px;height:100px;}
+#history_10{position:absolute;left:288px;top:365px;width:173px;height:100px;}
+#history_11{position:absolute;left:458px;top:365px;width:173px;height:100px;}
 
-
-#history_0{position:absolute;left:288px;top:97px;width:174px;height:100px;}
-#history_1{position:absolute;left:526px;top:97px;width:174px;height:100px;}
-#history_2{position:absolute;left:764px;top:97px;width:174px;height:100px;}
-#history_3{position:absolute;left:1002px;top:97px;width:174px;height:100px;}
-
-#history_4{position:absolute;left:288px;top:296px;width:174px;height:100px;}
-#history_5{position:absolute;left:526px;top:296px;width:174px;height:100px;}
-#history_6{position:absolute;left:764px;top:296px;width:174px;height:100px;}
-#history_7{position:absolute;left:1002px;top:296px;width:174px;height:100px;}
-
-#history_8{position:absolute;left:288px;top:495px;width:174px;height:100px;}
-#history_9{position:absolute;left:526px;top:495px;width:174px;height:100px;}
-#history_10{position:absolute;left:764px;top:495px;width:174px;height:100px;}
-#history_11{position:absolute;left:1002px;top:495px;width:174px;height:100px;}
 
 </style>
 <script type="text/javascript">
@@ -130,8 +127,6 @@ body{
 
 <body>
 
-
-<div style="position:absolute;left:0px;top:0px;width:150px;height:720px;background-color: #0b0e34; "></div>
 <div  id="myacount_img">
 ID:${userid}
 </div>
@@ -154,19 +149,14 @@ ID:${userid}
 <img id="help" src="${touming}" />
 </div>
 
-<!-- line -->
-<%-- <div style="position:absolute;left:60px;top:190px;">
-<img src="${imagePath}line.png" width="4px" height ="520px"/>
-</div> --%>
-
 <!-- 内容 -->
-<div class="intro" style="position:absolute;left:290px;top:50px;width:900px;height:600px;overflow:hidden;text-align:left;" >
+<div class="intro" style="position:absolute;left:130px;top:100px;width:480px;height:380px;overflow:hidden;text-align:left;" >
 ${md.label}
 </div>
 
 
 <c:if test="${pageCount>currentPage}">
-<div style="position:absolute;left:650px;top:650px;"><img id="next" src="${imagePath}btn_xiala_nor.png" /></div>
+<div style="position:absolute;left:354px;top:486px;"><img id="next" src="${imagePath}btn_xiala_nor.png" /></div>
 </c:if>
 
 <%@include file="/com/com_bottom.jsp"%>
