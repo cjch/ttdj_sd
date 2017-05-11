@@ -27,7 +27,7 @@
 	body{
 		margin:0;
 		padding:0;
-		color:#FFFFFF;
+		color:#f0f0f0;
 		background: transparent url('${basePath}${epg.thumbBig}') no-repeat;
 		font-family:"Microsoft YaHei";
 	}
@@ -75,7 +75,7 @@
 		{id:'navi_${vs.index}',name:'导航${vs.index}',type:'${vs.index}',action:goList,left:[''], right:['vedio_0'], up:['navi_${vs.index-1}','intro'], down:'navi_${vs.index+1}',linkImage:'${touming}', focusImage:'${templateImagePath}bg_belan_sel.png'},
 		</c:forEach>
 		<c:forEach items="${pb.dataList}" var="p" varStatus="vs">
-		{id:'vedio_${vs.index}',name:'列表${vs.index}',code:'${p.code}',index:'${vs.index}',action:goPlay,left:['${vs.index%4==0?'navi_0':''}','vedio_${vs.index-1}'], right:'vedio_${vs.index+1}', up:['vedio_${vs.index-4}','fav'], down:'vedio_${vs.index+4}',linkImage:'${touming}', focusImage:'${templateImagePath}button.png',focusHandler:marquess,blurHandler:stopmarquess,beforeMove:pn},
+		{id:'vedio_${vs.index}',name:'列表${vs.index}',code:'${p.code}',index:'${vs.index}',action:goPlay,left:['${vs.index%3==0?'navi_0':''}','vedio_${vs.index-1}'], right:'vedio_${vs.index+1}', up:['vedio_${vs.index-3}','fav'], down:'vedio_${vs.index+3}',linkImage:'${touming}', focusImage:'${templateImagePath}button.png',focusHandler:marquess,blurHandler:stopmarquess,beforeMove:pn},
 		</c:forEach>
 	]
 

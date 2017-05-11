@@ -27,39 +27,35 @@
 	body{
 		margin:0;
 		padding:0;
-		color:#FFFFFF;
-		background: transparent url('${comImagePath}bg.jpg') no-repeat;
+		color:#f0f0f0;
+		background: transparent url('${comImagePath}bg_splist.jpg') no-repeat;
 	}
 
-#vedio_0_div{position:absolute;left:300px;top:105px;width:201px;height:143px;}
-#vedio_1_div{position:absolute;left:538px;top:105px;width:201px;height:143px;}
-#vedio_2_div{position:absolute;left:776px;top:105px;width:201px;height:143px;}
-#vedio_3_div{position:absolute;left:1014px;top:105px;width:201px;height:143px;}
+	#vedio_0_div{position:absolute;left:130px;top:88px;width:150px;height:85px;}
+	#vedio_1_div{position:absolute;left:300px;top:88px;width:150px;height:85px;}
+	#vedio_2_div{position:absolute;left:470px;top:88px;width:150px;height:85px;}
+	#vedio_3_div{position:absolute;left:130px;top:183px;width:150px;height:85px;}
+	#vedio_4_div{position:absolute;left:300px;top:183px;width:150px;height:85px;}
+	#vedio_5_div{position:absolute;left:470px;top:183px;width:150px;height:85px;}
+	#vedio_6_div{position:absolute;left:130px;top:278px;width:150px;height:85px;}
+	#vedio_7_div{position:absolute;left:300px;top:278px;width:150px;height:85px;}
+	#vedio_8_div{position:absolute;left:470px;top:278px;width:150px;height:85px;}
+	#vedio_9_div{position:absolute;left:130px;top:373px;width:150px;height:85px;}
+	#vedio_10_div{position:absolute;left:300px;top:373px;width:150px;height:85px;}
+	#vedio_11_div{position:absolute;left:470px;top:373px;width:150px;height:85px;}
 
-#vedio_4_div{position:absolute;left:300px;top:304px;width:201px;height:143px;}
-#vedio_5_div{position:absolute;left:538px;top:304px;width:201px;height:143px;}
-#vedio_6_div{position:absolute;left:776px;top:304px;width:201px;height:143px;}
-#vedio_7_div{position:absolute;left:1014px;top:304px;width:201px;height:143px;}
-
-#vedio_8_div{position:absolute;left:300px;top:503px;width:201px;height:143px;}
-#vedio_9_div{position:absolute;left:538px;top:503px;width:201px;height:143px;}
-#vedio_10_div{position:absolute;left:776px;top:503px;width:201px;height:143px;}
-#vedio_11_div{position:absolute;left:1014px;top:503px;width:201px;height:143px;}
-
-#vedio_0{position:absolute;left:285px;top:92px;width:230px;height:167px;}
-#vedio_1{position:absolute;left:523px;top:92px;width:230px;height:167px;}
-#vedio_2{position:absolute;left:761px;top:92px;width:230px;height:167px;}
-#vedio_3{position:absolute;left:1000px;top:92px;width:230px;height:167px;}
-
-#vedio_4{position:absolute;left:285px;top:291px;width:230px;height:167px;}
-#vedio_5{position:absolute;left:523px;top:291px;width:230px;height:167px;}
-#vedio_6{position:absolute;left:761px;top:291px;width:230px;height:167px;}
-#vedio_7{position:absolute;left:1000px;top:291px;width:230px;height:167px;}
-
-#vedio_8{position:absolute;left:285px;top:491px;width:230px;height:167px;}
-#vedio_9{position:absolute;left:523px;top:491px;width:230px;height:167px;}
-#vedio_10{position:absolute;left:761px;top:491px;width:230px;height:167px;}
-#vedio_11{position:absolute;left:1000px;top:491px;width:230px;height:167px;}
+	#vedio_0{position:absolute;left:118px;top:80px;width:173px;height:100px;}
+	#vedio_1{position:absolute;left:288px;top:80px;width:173px;height:100px;}
+	#vedio_2{position:absolute;left:458px;top:80px;width:173px;height:100px;}
+	#vedio_3{position:absolute;left:118px;top:175px;width:173px;height:100px;}
+	#vedio_4{position:absolute;left:288px;top:175px;width:173px;height:100px;}
+	#vedio_5{position:absolute;left:458px;top:175px;width:173px;height:100px;}
+	#vedio_6{position:absolute;left:118px;top:170px;width:173px;height:100px;}
+	#vedio_7{position:absolute;left:288px;top:170px;width:173px;height:100px;}
+	#vedio_8{position:absolute;left:458px;top:170px;width:173px;height:100px;}
+	#vedio_9{position:absolute;left:118px;top:365px;width:173px;height:100px;}
+	#vedio_10{position:absolute;left:288px;top:365px;width:173px;height:100px;}
+	#vedio_11{position:absolute;left:458px;top:365px;width:173px;height:100px;}
 
 </style>
 <script type="text/javascript">	
@@ -82,9 +78,9 @@
 			code:'${p.code}',
 			index:'${vs.index}',
 			action:goPlay,
-			left:['${vs.index%4==0?'navi_0':''}','vedio_${vs.index-1}'], right:'vedio_${vs.index+1}', 
-			up:'vedio_${vs.index-4}', 
-			down:'vedio_${vs.index+4}',
+			left:['${vs.index%3==0?'navi_0':''}','vedio_${vs.index-1}'], right:'vedio_${vs.index+1}',
+			up:'vedio_${vs.index-3}',
+			down:'vedio_${vs.index+3}',
 			linkImage:'${touming}', 
 			focusImage:'${imagePath}button.png',
 			beforeMove:pn,
@@ -164,63 +160,57 @@
 </script>
 </head>
 <body>
-	<div style="position:absolute;left:0px;top:0px;width:230px;height:720px;background-color: #0b0e34; "></div>
-	<!-- line -->
-	<div style="position:absolute;left:60px;top:60px;">
-	<img src="${imagePath}line.png" width="4px" height ="660px"/>
-	</div>	
-
-	<div  style="position:absolute;left:63px;top:43px;">
-		<img id="search" src="${touming}" width="167px" height="68px" />
+	<div style="position:absolute;left:0;top:56px;">
+		<img id="search" src="${touming}" width="101px" height="41px" />
 	</div>
 	
-	<div  style="position:absolute;left:63px;top:117px;">
-		<img id="sx" src="${touming}" width="167px" height="68px" />
+	<div  style="position:absolute;left:0;top:97px;">
+		<img id="sx" src="${touming}" width="101px" height="41px" />
 	</div>
 	
-	<div style="position:absolute;left:112px;top:60px;font-size:24px;line-height:31px;text-align:center;">
-	<img src="${imagePath}ico_serch.png" />
+	<div style="position:absolute;left:38px;top:68px;font-size:14px;line-height:41px;text-align:right;">
+	<img src="${imagePath}ico_search.png" />
 	</div>		
-	<div style="position:absolute;left:156px;top:60px;font-size:24px;line-height:31px;text-align:center;">
+	<div style="position:absolute;left:0px;top:56px;width:91px;font-size:14px;line-height:41px;text-align:right;">
 	搜索
 	</div>	
 
-	<div style="position:absolute;left:112px;top:135px;font-size:24px;line-height:31px;text-align:center;">
+	<div style="position:absolute;left:38px;top:111px;font-size:14px;line-height:41px;text-align:right;">
 	<img src="${imagePath}ico_shai.png" />
 	</div>		
-	<div style="position:absolute;left:156px;top:135px;font-size:24px;line-height:31px;text-align:center;">
+	<div style="position:absolute;left:0px;top:97px;width:91px;font-size:14px;line-height:41px;text-align:right;">
 	筛选
 	</div>	
 	
 
 	
-	<div id="navi" style="position:absolute;left:60px;top:200px;width:170px;height:515px;overflow:hidden;">
+	<div id="navi" style="position:absolute;left:0;top:143px;width:101px;height:387px;overflow:hidden;">
 	<c:forEach items="${naviList}" var="p" varStatus="vs" begin="0" end="6" >
-		<div style="position:absolute;left:0px;top:${vs.index*75}px;font-size:24px;line-height:31px;text-align:right;width:150px;">
-		<img id="navi_${vs.index}" src="${touming}" width="170px" height="60px" />
+		<div style="position:absolute;left:0px;top:${vs.index*41}px;font-size:14px;line-height:41px;text-align:right;width:101px;">
+		<img id="navi_${vs.index}" src="${touming}" width="101px" height="41px" />
 		</div>	
 	</c:forEach>
 	<c:forEach items="${naviList}" var="p" varStatus="vs">
-		<div id="navi_txt_${vs.index}" style="position:absolute;left:0px;top:${18+vs.index*75}px;font-size:24px;line-height:31px;text-align:right;width:150px;">
+		<div id="navi_txt_${vs.index}" style="position:absolute;left:0px;top:${vs.index*41}px;font-size:14px;line-height:41px;text-align:right;width:91px;">
 		${p}
 		</div>	
 	</c:forEach>
 	</div>
 	
-	<div id="title" style="position:absolute;top:39px;left:300px;font-size:20px;color:#788195;line-height:40px;text-align:left;">全部视频</div>
+	<div id="title" style="position:absolute;top:129px;left:130px;font-size:14px;color:#f0f0f0;opacity:0.4;line-height:20px;text-align:left;">全部视频</div>
 	
 	<c:forEach items="${pb.dataList}" var="p" varStatus="vs">
 	<div id="vedio_${vs.index}_div">
-	<div style="left:0px;top:0px;">
-	<img src="${basePath}${p.thumbHD}" width="201px" height ="113px"/>
-	</div>	
-	<div style="background-color: #505275; top:93px;left:0px;width:90px;height:20px;opacity:0.50;font-size:14px;" >播放：${p.hits}</div>
-	<div id="vedio_${vs.index}_txt"  style="background-color: #505275; top:113px;left:0px;width:201px;height:30px;line-height:30px;padding-left:10px;overflow:hidden;" >${p.name}</div>
+		<div style="left:0px;top:0px;">
+			<img src="${basePath}${p.thumbHD}" width="150px" height ="84px"/>
+		</div>
+		<div style="bottom:18px;left:0px;padding-left:5px;height:16px;opacity:0.5;font-size:10px;" >播放：${p.hits}</div>
+		<div id="vedio_${vs.index}_txt"  style="background:url(${comImagePath}bg_zhezhao.png);top:66px;left:0;width:150px;height:20px;padding-left:5px;font-size:10px;line-height:20px;overflow:hidden;" >${p.name}</div>
 	</div>
 	</c:forEach>
 	 
 	<c:forEach items="${pb.dataList}" var="p" varStatus="vs">
-		<img id="vedio_${vs.index}" src="${touming}" width="235px" height ="167px"/>
+		<img id="vedio_${vs.index}" src="${touming}"/>
 	</c:forEach>
 	<%@include file="/com/com_bottom.jsp"%>
 	
