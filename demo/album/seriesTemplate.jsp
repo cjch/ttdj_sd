@@ -90,23 +90,25 @@
 		top: 353px;
 		width: 118px;
 		height: 84px;
+		-moz-border-radius:2px 2px 0 0;
+		-webkit-border-radius:2px 2px 0 0;
+		border-radius:2px 2px 0 0;
 	}
 	/*按钮高亮的时候，给图片加边距、颜色*/
 	.btn-group.focused{
 		padding: 2px;
 		background-color: #4599ff;
-		border-radius: 10px;
-	//border:solid 1px #4a9bff;
-		border:solid 3px #f0f0f0;
+		border-radius: 2px;
+		border:solid 2px #f0f0f0;
 		box-shadow: 0px 0px 2px 3px #1465C9;
 		overflow: hidden;
 	}
 	.btn-group img{
 		display: inline-block;
 		vertical-align: middle;
-		-moz-border-radius:4px;
+		/*-moz-border-radius:4px;
 		-webkit-border-radius:4px;
-		border-radius:4px;
+		border-radius:4px;*/
 		/*width: 201px;
 		height: 113px;*/
 	}
@@ -241,8 +243,8 @@
 		var currentPage = parseInt('${pb.current}');
 		var totalPage = parseInt('${pb.pageCount}');
 		for(var i=0 ; i < totalPage ; i++){
-			var html1 = "<div style='left:"+ 65*i +"px;top:-100px;' ><img id='page_"+i+"' src='${comImagePath}album/btn_jishu_nor.png' width='62px'; height='23px'; /></div>";
-			var html2 = "<div id='page_"+i+"_txt' style='left:"+ 65*i +"px;top:-100px;width:62px;height:23px;text-align:center;font-size:14px;line-height:23px;' >"+(i*5+1)+"-"+(i*5+5)+"期</div>";
+			var html1 = "<div style='left:"+ 65*i +"px;top:-120px;' ><img id='page_"+i+"' src='${comImagePath}album/btn_jishu_nor.png' width='62px'; height='23px'; /></div>";
+			var html2 = "<div id='page_"+i+"_txt' style='left:"+ 65*i +"px;top:-120px;width:62px;height:23px;text-align:center;font-size:14px;line-height:23px;' >"+(i*5+1)+"-"+(i*5+5)+"期</div>";
 			G("page").innerHTML += html1+html2;
 			var button =
 			{id:'page_'+i,
@@ -284,25 +286,25 @@
 	<!-- 剧集名称 -->
 	<div style="position:absolute;left:365px;top:105px;font-size:18px;color:#f0f0f0;font-weight:500;width:400px;text-align:left;" >${epg.title}</div>
 	<!-- 剧集说明 -->
-	<div style="font-size14px;position:absolute;top:140px;left:365px;">
+	<div style="font-size:14px;position:absolute;top:140px;left:365px;">
 		<span style="padding-right:10px;">特色专栏</span>|
 		<span style="padding-right:10px;padding-left:10px;">英雄联盟</span>|
 		<span style="padding-left:10px;">总观看次数：64.5万</span>
 	</div>
-	<div style="position:absolute;left:365px;top:165px;font-size:14px;color:#f0f0f0;width:400px;height:218px;overflow:hidden;opacity:.5;" >${epg.intro}</div>
+	<div style="position:absolute;left:365px;top:165px;font-size:12px;color:#f0f0f0;width:400px;height:80px;overflow:hidden;opacity:.5;" >${epg.intro}</div>
 
 	<!-- 全屏 -->
-	<div style="position:absolute;left:-5px;top:89px;" ><img id="fullcreenBig" src="${touming}" width="380px" height="220px" /></div>
-	<div style="position:absolute;left:395px;top:250px;" ><img id="fullcreen" src="${comImagePath}album/btn_quanping_nor.png" /></div>
-	<div style="position:absolute;left:395px;top:250px;" ><img src="${touming}" width="100px" height="40px" /></div>
+	<div style="position:absolute;left:-5px;top:87px;" ><img id="fullcreenBig" src="${touming}" width="380px" height="222px" /></div>
+	<div style="position:absolute;left:370px;top:250px;" ><img id="fullcreen" src="${comImagePath}album/btn_quanping_nor.png" /></div>
+	<div style="position:absolute;left:370px;top:250px;" ><img src="${touming}" width="100px" height="40px" /></div>
 	<!-- 收藏 -->
 	<c:if test="${isCollected == 'true'}">
-	<div style="position:absolute;left:515px;top:250px;" ><img id="fav" src="${comImagePath}album/btn_alsave_nor.png" /></div>
+	<div style="position:absolute;left:500px;top:250px;" ><img id="fav" src="${comImagePath}album/btn_alsave_nor.png" /></div>
 	</c:if>
 	<c:if test="${isCollected == 'false'}">
-	<div style="position:absolute;left:515px;top:250px;" ><img id="fav" src="${comImagePath}album/btn_save_nor.png" /></div>
+	<div style="position:absolute;left:500px;top:250px;" ><img id="fav" src="${comImagePath}album/btn_save_nor.png" /></div>
 	</c:if>
-	<div style="position:absolute;left:515px;top:250px;" ><img src="${touming}" width="100px" height="40px" /></div>
+	<div style="position:absolute;left:500px;top:250px;" ><img src="${touming}" width="100px" height="40px" /></div>
 
 
 	<!-- 往期列表 -->
@@ -316,7 +318,7 @@
 		<div style="left:0px;top:0px;width:122px;height:113px" >
 		<img src="${basePath}${p.thumbHD}" width="122px" height ="88px"/>
 		</div>
-		<div id="video_${vs.index}_txt"  style="background-color: #505275; top:65px;left:-2px;width:145px;height:14px;line-height:14px;padding-top:4px;padding-bottom:2px;padding-left:5px;" >${p.name}</div>
+		<div id="video_${vs.index}_txt"  style="background-color: #505275; top:66px;left:-2px;width:145px;white-space:nowrap;height:12px;line-height:12px;padding-top:4px;padding-bottom:6px;padding-left:4px;text-align:left;font-size:12px;" >${p.name}</div>
 		</div>
 	</c:forEach>
 	<c:forEach items="${pb.dataList}" var="p" varStatus="vs">
