@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ include file= "/ttdj_sd/demo/com/com_head.jsp" %>
+<%@ include file= "/com/com_head.jsp" %>
 <%!
 	public int idx = 0;//临时代码，视频idx
 %>
