@@ -13,7 +13,7 @@
 	body
 	{
 		/*定义背景图*/
-		background-image: url('${imagePath}${source}.png');
+		background-image: url('${imagePath}${source}.jpg');
 	}
 	</style>
 	
